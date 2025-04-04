@@ -1,6 +1,6 @@
 # Lucky Nakola's Portfolio Website
 
-![Portfolio Preview](img/portfolio-preview.png)
+![Portfolio Preview](img/preview.png)
 
 Welcome to the repository for my personal portfolio website! I’m Lucky Nakola, a Software Engineer, AI & ML Enthusiast, and Web Developer based in Africa. This portfolio showcases my skills, projects, education, experience, and passion for creating impactful digital solutions in areas like education, healthcare, and agriculture.
 
