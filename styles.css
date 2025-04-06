@@ -251,6 +251,10 @@ nav .logo {
 /* About Section */
 .about-section {
   background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  background: #202205;
+
+
+
 }
 
 .about-container {
@@ -323,7 +327,7 @@ nav .logo {
 
 /* Skills Section */
 #skills {
-  background: #111;
+  background: #121425;
 }
 
 .skills-grid {
@@ -394,7 +398,8 @@ nav .logo {
 
 /* Education & Experience Section (Simplified) */
 .education-experience {
-  background: #1a1a1a;
+  background: #202205;
+
 }
 
 .edu-exp-container {
@@ -480,7 +485,7 @@ nav .logo {
 
 /* Projects Section */
 #projects {
-  background: #111;
+  background: #121425;
 }
 
 .projects-grid {
@@ -518,7 +523,7 @@ nav .logo {
 
 /* Contact Section */
 #contact {
-  background: #1a1a1a;
+  background: #202205;
 }
 
 .contact-description {
@@ -619,7 +624,8 @@ nav .logo {
 
 /* Footer */
 footer {
-  background: #111;
+  background: #121425;
+
   color: #fff;
   padding: 4rem 2rem 2rem;
   position: relative;
