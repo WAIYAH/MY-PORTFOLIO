@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lucky Nakola's technical expertise — AI/ML, full-stack development, and the tools and methodologies I use to build impactful software.">
+  <title>Expertise — Lucky Nakola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Space Grotesk','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body class="loading">
+  <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+
+  <!-- Nav -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Home"><span class="text-2xl font-bold font-display text-gradient">LN</span><span class="hidden sm:inline text-sm font-medium text-slate-400">Lucky Nakola</span></a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-page="home">Home</a>
+          <a href="about.html" class="nav-link" data-page="about">About</a>
+          <a href="expertise.html" class="nav-link active" data-page="expertise">Expertise</a>
+          <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+          <a href="insights.html" class="nav-link" data-page="insights">Insights</a>
+          <a href="contact.html" class="btn btn-primary text-xs !py-2 !px-5" data-page="contact">Let's Talk</a>
+        </div>
+        <button class="md:hidden p-2 -mr-2" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger"><span></span><span></span><span></span></div></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="flex flex-col items-center gap-4">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="expertise.html" class="nav-link">Expertise</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="insights.html" class="nav-link">Insights</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="cv/view.html" class="nav-link">Resume</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Header -->
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-20 hero-gradient relative overflow-hidden">
+      <div class="grid-pattern"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal">
+          <p class="section-label">Skills & Capabilities</p>
+          <h1 class="section-heading text-white max-w-2xl">Technical <span class="text-gradient">Expertise</span></h1>
+          <p class="mt-4 text-lg text-slate-400 max-w-xl">A deep-dive into the technologies, tools, and methodologies I use to build impactful software.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix -->
+    <section class="py-20 lg:py-28" style="background:#0a0f1c">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Languages & Frameworks -->
+        <div class="mb-20">
+          <div class="reveal mb-10">
+            <h2 class="font-display text-2xl font-bold text-white">Languages & Frameworks</h2>
+            <p class="text-slate-400 mt-2">Core technologies I build with every day.</p>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 stagger-children">
+            <!-- Python -->
+            <div class="card !p-5 group">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center">
+                  <span class="text-lg">🐍</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-white text-sm">Python</h3>
+                  <p class="text-xs text-slate-500">AI / ML / Scripting</p>
+                </div>
+              </div>
+              <div class="skill-progress"><div class="skill-progress-bar" style="--progress:90%"></div></div>
+              <p class="text-xs text-slate-500 mt-2 text-right">Advanced</p>
+            </div>
+            <!-- HTML5 -->
+            <div class="card !p-5 group">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center">
+                  <span class="text-lg">🌐</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-white text-sm">HTML5</h3>
+                  <p class="text-xs text-slate-500">Semantic / Accessible</p>
+                </div>
+              </div>
+              <div class="skill-progress"><div class="skill-progress-bar" style="--progress:90%"></div></div>
+              <p class="text-xs text-slate-500 mt-2 text-right">Advanced</p>
+            </div>
+            <!-- CSS -->
+            <div class="card !p-5 group">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                  <span class="text-lg">🎨</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-white text-sm">CSS3 / Tailwind</h3>
+                  <p class="text-xs text-slate-500">Responsive / Animations</p>
+                </div>
+              </div>
+              <div class="skill-progress"><div class="skill-progress-bar" style="--progress:85%"></div></div>
+              <p class="text-xs text-slate-500 mt-2 text-right">Advanced</p>
+            </div>
+            <!-- JavaScript -->
+            <div class="card !p-5 group">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-yellow-400/10 flex items-center justify-center">
+                  <span class="text-lg">⚡</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-white text-sm">JavaScript</h3>
+                  <p class="text-xs text-slate-500">ES6+ / DOM / APIs</p>
+                </div>
+              </div>
+              <div class="skill-progress"><div class="skill-progress-bar" style="--progress:80%"></div></div>
+              <p class="text-xs text-slate-500 mt-2 text-right">Proficient</p>
+            </div>
+            <!-- SQL -->
+            <div class="card !p-5 group">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+                  <span class="text-lg">🗄️</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-white text-sm">SQL</h3>
+                  <p class="text-xs text-slate-500">Queries / Database Design</p>
+                </div>
+              </div>
+              <div class="skill-progress"><div class="skill-progress-bar" style="--progress:75%"></div></div>
+              <p class="text-xs text-slate-500 mt-2 text-right">Proficient</p>
+            </div>
+            <!-- PHP -->
+            <div class="card !p-5 group">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center">
+                  <span class="text-lg">🐘</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-white text-sm">PHP</h3>
+                  <p class="text-xs text-slate-500">Server-side / APIs</p>
+                </div>
+              </div>
+              <div class="skill-progress"><div class="skill-progress-bar" style="--progress:65%"></div></div>
+              <p class="text-xs text-slate-500 mt-2 text-right">Intermediate</p>
+            </div>
+            <!-- Bootstrap -->
+            <div class="card !p-5 group">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center">
+                  <span class="text-lg">🅱️</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-white text-sm">Bootstrap</h3>
+                  <p class="text-xs text-slate-500">UI Framework</p>
+                </div>
+              </div>
+              <div class="skill-progress"><div class="skill-progress-bar" style="--progress:80%"></div></div>
+              <p class="text-xs text-slate-500 mt-2 text-right">Proficient</p>
+            </div>
+            <!-- Git -->
+            <div class="card !p-5 group">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center">
+                  <span class="text-lg">🔀</span>
+                </div>
+                <div>
+                  <h3 class="font-display font-semibold text-white text-sm">Git / GitHub</h3>
+                  <p class="text-xs text-slate-500">Version Control</p>
+                </div>
+              </div>
+              <div class="skill-progress"><div class="skill-progress-bar" style="--progress:85%"></div></div>
+              <p class="text-xs text-slate-500 mt-2 text-right">Advanced</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Technologies -->
+        <div class="mb-20">
+          <div class="reveal mb-10">
+            <h2 class="font-display text-2xl font-bold text-white">Tools & Technologies</h2>
+            <p class="text-slate-400 mt-2">The ecosystem of tools that power my workflow.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 stagger-children">
+            <span class="badge">VS Code</span>
+            <span class="badge">Git & GitHub</span>
+            <span class="badge badge-violet">Figma</span>
+            <span class="badge badge-gold">Prompt Engineering</span>
+            <span class="badge">CI/CD Pipelines</span>
+            <span class="badge badge-emerald">Agile / Scrum</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge badge-violet">Vercel</span>
+            <span class="badge">npm</span>
+            <span class="badge badge-gold">ChatGPT / AI Tools</span>
+            <span class="badge">Tailwind CSS</span>
+            <span class="badge badge-emerald">Linux CLI</span>
+            <span class="badge">Postman</span>
+            <span class="badge badge-violet">Canva</span>
+            <span class="badge">MySQL</span>
+            <span class="badge badge-gold">WhatsApp API</span>
+          </div>
+        </div>
+
+        <!-- Methodology -->
+        <div>
+          <div class="reveal mb-10">
+            <h2 class="font-display text-2xl font-bold text-white">How I Work</h2>
+            <p class="text-slate-400 mt-2">My approach to building great software.</p>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+            <div class="card text-center p-6">
+              <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-cyan-500/10 flex items-center justify-center text-2xl">1</div>
+              <h3 class="font-display font-semibold text-white mb-2">Discover</h3>
+              <p class="text-sm text-slate-400">Understand the problem deeply. Research users, context, and constraints before writing a single line.</p>
+            </div>
+            <div class="card text-center p-6">
+              <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-violet-500/10 flex items-center justify-center text-2xl">2</div>
+              <h3 class="font-display font-semibold text-white mb-2">Design</h3>
+              <p class="text-sm text-slate-400">Architect the solution. Plan data flow, component structure, and user interactions with intention.</p>
+            </div>
+            <div class="card text-center p-6">
+              <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-amber-500/10 flex items-center justify-center text-2xl">3</div>
+              <h3 class="font-display font-semibold text-white mb-2">Develop</h3>
+              <p class="text-sm text-slate-400">Build iteratively. Ship early, test often, and refine based on real feedback and data.</p>
+            </div>
+            <div class="card text-center p-6">
+              <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-emerald-500/10 flex items-center justify-center text-2xl">4</div>
+              <h3 class="font-display font-semibold text-white mb-2">Deliver</h3>
+              <p class="text-sm text-slate-400">Deploy with confidence. Monitor performance, gather insights, and continuously improve.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 relative overflow-hidden" style="background:#030712">
+      <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-violet-500/5"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+        <h2 class="font-display text-3xl font-bold text-white mb-4">See These Skills in Action</h2>
+        <p class="text-slate-400 mb-8 max-w-lg mx-auto">Check out my project portfolio to see how I apply these technologies to solve real-world problems.</p>
+        <a href="projects.html" class="btn btn-primary">View Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-gradient pt-16 pb-8 border-t border-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="index.html" class="inline-flex items-center gap-2 mb-4"><span class="text-2xl font-bold font-display text-gradient">LN</span></a>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">Software Engineer & AI Innovator building impactful digital solutions.</p>
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-sm text-white mb-4">Navigation</h4>
+          <ul class="space-y-2.5"><li><a href="about.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">About</a></li><li><a href="expertise.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Expertise</a></li><li><a href="projects.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Projects</a></li><li><a href="insights.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Insights</a></li></ul>
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-sm text-white mb-4">Resources</h4>
+          <ul class="space-y-2.5"><li><a href="cv/view.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Resume</a></li><li><a href="cv/download.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Download CV</a></li><li><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a></li></ul>
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-sm text-white mb-4">Get in Touch</h4>
+          <ul class="space-y-2.5"><li><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">luckiesdabwoy@gmail.com</a></li><li><a href="https://wa.me/254715674828" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">+254 715 674 828</a></li><li><span class="text-sm text-slate-400">Nairobi, Kenya 🇰🇪</span></li></ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">© 2026 Lucky Nakola. Crafted with precision and purpose.</p>
+        <p class="text-xs text-slate-600 font-mono">v2.0</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" aria-label="Scroll to top"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
+  <script src="js/app.js"></script>
+</body>
+</html>

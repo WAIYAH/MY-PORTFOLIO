@@ -3,284 +3,311 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lucky Nakola - Software Engineer and AI Innovator">
-  <title>Lucky Nakola | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Lucky Nakola — Software Engineer & AI Innovator. Building intelligent solutions that drive real-world impact across Africa and beyond.">
+  <meta name="author" content="Lucky Nakola">
+  <meta property="og:title" content="Lucky Nakola — Software Engineer & AI Innovator">
+  <meta property="og:description" content="Building intelligent solutions that drive real-world impact across Africa and beyond.">
+  <meta property="og:image" content="img/preview.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Lucky Nakola — Software Engineer & AI Innovator</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">Lucky Nakola</div>
-      <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-      <label for="menu-toggle" class="menu-toggle">☰</label>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="loading">
+
+  <!-- Page Loader -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-2 no-underline" aria-label="Lucky Nakola — Home">
+          <span class="text-2xl font-bold font-display text-gradient">LN</span>
+          <span class="hidden sm:inline text-sm font-medium text-slate-400">Lucky Nakola</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link active" data-page="home">Home</a>
+          <a href="about.html" class="nav-link" data-page="about">About</a>
+          <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
+          <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+          <a href="insights.html" class="nav-link" data-page="insights">Insights</a>
+          <a href="contact.html" class="btn btn-primary text-xs !py-2 !px-5" data-page="contact">Let's Talk</a>
+        </div>
+        <button class="md:hidden p-2 -mr-2" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <div class="hamburger"><span></span><span></span><span></span></div>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="flex flex-col items-center gap-4">
+      <a href="index.html" class="nav-link" data-page="home">Home</a>
+      <a href="about.html" class="nav-link" data-page="about">About</a>
+      <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
+      <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+      <a href="insights.html" class="nav-link" data-page="insights">Insights</a>
+      <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+      <a href="cv/view.html" class="nav-link" data-page="cv">Resume</a>
+    </div>
+  </div>
 
   <main>
-    <!-- Hero Section -->
-    <section id="home" class="section hero">
-      <div class="section-bg"></div>
-      <div class="content">
-        <div class="hero-text">
-          <h1>Hello! I’m Lucky Nakola</h1>
-          <h2>Software Engineer | AI & ML Enthusiast | Web Developer</h2>
-          <p>I specialize in AI, machine learning, and full-stack development, creating impactful digital solutions.</p>
-          <div class="cta-buttons">
-            <a href="#projects" class="cta primary">View My Work</a>
-            <a href="pdf/LUCKY NAKOLA CV.pdf" class="cta secondary" download>Download CV</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="img/Lucky.jpg" alt="Lucky Nakola">
-          <div class="social-circle">
-            <a href="https://www.facebook.com/lucky.loonkishu.7" class="social-icon" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="#fff"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-            </a>
-            <a href="https://github.com/WAIYAH" class="social-icon" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.332-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-            <a href="https://wa.me/254715674828" class="social-icon" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 17.185c-.149.405-.455.72-.91.856-.563.173-1.298.15-2.172-.068-.873-.218-1.808-.786-2.548-1.346-1.48-.998-2.602-2.334-3.219-3.892-.304-.77-.24-1.485.047-2.093.149-.314.342-.592.583-.811.241-.218.498-.405.774-.548.138-.071.276-.142.414-.213.138-.071.276-.142.414-.213.276-.142.483-.071.621.213.138.284.483.852.621 1.136.138.284.276.568.414.852.138.284.069.568-.069.852-.138.284-.414.568-.69.852-.276.284-.552.568-.828.852-.276.284-.414.568-.276.852.138.284.621.852 1.242 1.42.621.568 1.242 1.136 1.863 1.42.621.284 1.104.426 1.518.426.414 0 .759-.142 1.035-.426.276-.284.414-.568.552-.852.138-.284.276-.568.414-.852.138-.284.276-.426.414-.426.138 0 .276.142.414.426z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/lucky-nakola-0a657a276?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BHAX2p28qTyC%2FvO9Iezd0vA%3D%3D" class="social-icon" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="#fff"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- ===== HERO ===== -->
+    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden pt-20">
+      <div class="grid-pattern"></div>
+      <div class="orb orb-cyan w-72 h-72 -top-20 -right-20 lg:w-96 lg:h-96"></div>
+      <div class="orb orb-violet w-60 h-60 bottom-20 -left-20 lg:w-80 lg:h-80"></div>
 
-    <!-- About Me Section -->
-    <section id="about" class="section about-section">
-      <div class="section-bg"></div>
-      <div class="content">
-        <div class="about-container">
-          <div class="about-interests">
-            <h3>Interests</h3>
-            <ul class="interests-list">
-              <li>🎮 Gaming & AI Innovations</li>
-              <li>📚 Tech Blogging & Knowledge Sharing</li>
-              <li>🚀 Building Scalable Applications</li>
-              <li>🎤 Speaking at Tech Events</li>
-            </ul>
-          </div>
-          <div class="about-text">
-            <h2>About Me</h2>
-            <p>I’m Lucky Nakola, a tech enthusiast with a burning passion for coding and AI. Based in Africa, I’m dedicated to creating solutions that uplift communities—think education, healthcare, and agriculture.</p>
-            <blockquote class="highlight-quote">
-              "I live for the thrill of hackathons, the joy of mentoring, and the dream of a tech-powered future."
-            </blockquote>
-            <p>My journey is fueled by a desire to innovate and empower, blending creativity with technology to make a lasting impact.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <div class="section-bg"></div>
-      <div class="content">
-        <h2>My Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">HTML5 <span class="skill-bar"><span style="width: 90%;"></span></span></div>
-          <div class="skill-card">CSS <span class="skill-bar"><span style="width: 85%;"></span></span></div>
-          <div class="skill-card">JavaScript <span class="skill-bar"><span style="width: 80%;"></span></span></div>
-          <div class="skill-card">Python <span class="skill-bar"><span style="width: 90%;"></span></span></div>
-          <div class="skill-card">SQL <span class="skill-bar"><span style="width: 75%;"></span></span></div>
-          <div class="skill-card">Git/GitHub <span class="skill-bar"><span style="width: 85%;"></span></span></div>
-          <div class="skill-card">Bootstrap <span class="skill-bar"><span style="width: 80%;"></span></span></div>
-          <div class="skill-card">PHP <span class="skill-bar"><span style="width: 65%;"></span></span></div>
-        </div>
-        <div class="tools-section">
-          <h3>Tools & Technologies</h3>
-          <ul class="tools-list">
-            <li>🖥️ VS Code</li>
-            <li>🔄 Git & GitHub</li>
-            <li>🔧 Agile Methodology</li>
-            <li>🌐 Prompt Engineering</li>
-            <li>⚙️ CI/CD Pipelines</li>
-            <li>🛠️ Figma (for UI/UX design)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education & Experience Section (Simplified, No Toggle) -->
-    <section id="education" class="section education-experience">
-      <div class="section-bg"></div>
-      <div class="content">
-        <h2>Education & Experience</h2>
-        <div class="edu-exp-container">
-          <!-- Education -->
-          <div class="edu-exp-column">
-            <h3>Education</h3>
-            <div class="timeline">
-              <div class="timeline-entry">
-                <div class="timeline-date">May 2025 - Dec 2027</div>
-                <div class="timeline-content">
-                  <h4>Bachelor of Science in Software Development</h4>
-                  <p class="institution">KCA University</p>
-                  <p>Intensive training in software engineering, enhancing practical skills.</p>
-                </div>
-              </div>
-              <div class="timeline-entry">
-                <div class="timeline-date"> Feb 2025 - August 2025</div>
-                <div class="timeline-content">
-                  <h4>PLP Software Engineering Scholarship</h4>
-                  <p class="institution">Specialized Training</p>
-                  <p>Intensive training in software engineering, enhancing practical skills.</p>
-                </div>
-              </div>
-              <div class="timeline-entry">
-                <div class="timeline-date">May 2022 - Dec 2024</div>
-                <div class="timeline-content">
-                  <h4>Diploma in Computer Science</h4>
-                  <p class="institution">Riara University</p>
-                  <p>Mastered foundational coding and software development skills.</p>
-                </div>
-              </div>
-              <div class="timeline-entry">
-                <div class="timeline-date">Jan 2018 - May 2022</div>
-                <div class="timeline-content">
-                  <h4>BTEC Level 3 International Engineering & IBCP</h4>
-                  <p class="institution">Mpesa Foundation Academy</p>
-                  <p>Studied Maths AI SL, English SL, Reflective Project, Service Learning, and French.</p>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Text -->
+          <div class="order-2 lg:order-1">
+            <div class="reveal">
+              <p class="section-label">Software Engineer & AI Innovator</p>
+            </div>
+            <h1 class="reveal font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6" style="transition-delay:100ms">
+              Hi, I'm <span class="text-gradient">Lucky</span><br><span class="text-gradient">Nakola</span>
+            </h1>
+            <div class="reveal mb-6" style="transition-delay:200ms">
+              <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-lg">
+                I build
+                <span id="typing-text" class="text-cyan-400 font-medium"
+                      data-words='["intelligent AI solutions","scalable web applications","community-driven platforms","impactful digital tools"]'>intelligent AI solutions</span><span class="typing-cursor" aria-hidden="true"></span>
+                <br>that drive real-world impact across Africa and beyond.
+              </p>
+            </div>
+            <div class="reveal flex flex-wrap gap-4 mb-10" style="transition-delay:300ms">
+              <a href="projects.html" class="btn btn-primary">
+                View My Work
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+              <a href="pdf/LUCKY NAKOLA CV.pdf" class="btn btn-secondary" download>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Download CV
+              </a>
+            </div>
+            <div class="reveal flex items-center gap-5" style="transition-delay:400ms">
+              <span class="text-xs text-slate-500 font-mono uppercase tracking-wider">Connect</span>
+              <div class="h-px w-8 bg-slate-700"></div>
+              <div class="flex gap-3">
+                <a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400/30 transition-all duration-300" aria-label="GitHub">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.332-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/lucky-nakola-0a657a276" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400/30 transition-all duration-300" aria-label="LinkedIn">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://wa.me/254715674828" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-emerald-400 hover:border-emerald-400/30 transition-all duration-300" aria-label="WhatsApp">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/lucky.loonkishu.7" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-400/30 transition-all duration-300" aria-label="Facebook">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
               </div>
             </div>
           </div>
-          <!-- Experience -->
-          <div class="edu-exp-column">
-            <h3>Experience</h3>
-            <div class="timeline">
-              <div class="timeline-entry">
-                <div class="timeline-date">Feb 2025 - May 2025</div>
-                <div class="timeline-content">
-                  <h4>Software and ICT Support Intern</h4>
-                  <p class="institution">Kenya Institute of Curriculum Development</p>
-                  <p>Worked on AI-driven chatbots and data analytics solutions for local businesses.</p>
+
+          <!-- Profile Image -->
+          <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div class="reveal-scale relative">
+              <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                <div class="absolute inset-0 rounded-full border-2 border-dashed border-cyan-500/20 animate-[spin_30s_linear_infinite]"></div>
+                <div class="absolute inset-4 rounded-full overflow-hidden border-2 border-slate-700/50">
+                  <img src="img/Lucky.jpg" alt="Lucky Nakola — Software Engineer" class="w-full h-full object-cover" width="384" height="384">
                 </div>
-              </div>
-              <div class="timeline-entry">
-                <div class="timeline-date">Sept 2024 - Dec 2024</div>
-                <div class="timeline-content">
-                  <h4>ICT Attachee</h4>
-                  <p class="institution">Kenya National Library Service</p>
-                  <p>Contributed to educational platforms, including the ICT Support Platform for KNLS.</p>
-                </div>
-              </div>
-              <div class="timeline-entry">
-                <div class="timeline-date">2023 - Present</div>
-                <div class="timeline-content">
-                  <h4>Freelance Junior Web Developer</h4>
-                  <p class="institution">Self-Employed</p>
-                  <p>Developed responsive websites for small businesses, including Kanunka FC.</p>
+                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/10 to-violet-500/10 blur-2xl -z-10"></div>
+                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-900/90 backdrop-blur-sm border border-slate-700 rounded-full px-4 py-1.5 flex items-center gap-2">
+                  <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                  </span>
+                  <span class="text-xs font-medium text-slate-300">Available for work</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="section-bg"></div>
-      <div class="content">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <img src="img/Spendhack.png" alt="SpendHack WhatsApp Chatbot">
-            <h3>SpendHack WhatsApp Chatbot</h3>
-            <p>A vibrant financial tool built with Python and WhatsApp API.</p>
-            <a href="https://spendhackv1.vercel.app/" class="cta">Live Demo</a>
+        <!-- Stats Bar -->
+        <div class="reveal mt-16 lg:mt-24 pt-8 border-t border-slate-800/50">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <p class="stat-number text-gradient" data-count="10" data-suffix="+">0</p>
+              <p class="text-sm text-slate-500 mt-1">Projects Delivered</p>
+            </div>
+            <div>
+              <p class="stat-number text-gradient" data-count="15" data-suffix="+">0</p>
+              <p class="text-sm text-slate-500 mt-1">Technologies</p>
+            </div>
+            <div>
+              <p class="stat-number text-gradient" data-count="3" data-suffix="+">0</p>
+              <p class="text-sm text-slate-500 mt-1">Years Experience</p>
+            </div>
+            <div>
+              <p class="stat-number text-gradient" data-count="5" data-suffix="+">0</p>
+              <p class="text-sm text-slate-500 mt-1">Happy Clients</p>
+            </div>
           </div>
-          <div class="project-card">
-            <img src="img/Kanunka Cranes.png" alt="Kanunka FC Website">
-            <h3>Kanunka FC Website</h3>
-            <p>A lively football club site crafted with HTML, CSS, and JavaScript.</p>
-            <a href="https://the-cranes.vercel.app/" class="cta">Live Demo</a>
-          </div>
-          <div class="project-card">
-            <img src="img/My-Swifttiba.png" alt="Swiftiba">
-            <h3>My-SwifTiba</h3>
-            <p>An energetic educational tool for content delivery.</p>
-            <a href="#" class="cta">Live Demo</a>
-          </div>
-          <div class="project-card">
-            <img src="img/Tech-Mart.png" alt="Tech-Mart website">
-            <h3>TechMart</h3>
-            <p>An energetic educational tool for content delivery.</p>
-            <a href="https://tech-mart-jade.vercel.app/" class="cta">Live Demo</a>
-          </div>
-          <div class="project-card">
-            <img src="img/FreshFood.png" alt="fresh food">
-            <h3>Fresh Foods</h3>
-            <p>An energetic educational tool for content delivery.</p>
-            <a href="https://wk-8-web-development.vercel.app/" class="cta">Live Demo</a>
-          </div>
-          <div class="project-card">
-            <img src="img/Replicate.png" alt="Replicate">
-            <h3>Replicate</h3>
-            <p>An energetic educational tool for content delivery.</p>
-            <a href="https://replicate-topaz.vercel.app/" class="cta">Live Demo</a>
-          </div>
-          <div class="project-card">
-            <img src="img/FirstAidGuru.png" alt="First Aid Guru">
-            <h3>First Aid Guru</h3>
-            <p>An energetic educational tool for content delivery.</p>
-            <a href="https://week8-final.vercel.app/" class="cta">Live Demo</a>
-          </div>
-          <div class="project-card">
-            <img src="img/NakolaDev.png" alt="Replicate">
-            <h3>Nakola Dev</h3>
-            <p>An Tech portfolio website for dispalying.</p>
-            <a href="https://replicate-topaz.vercel.app/" class="cta">Live Demo</a>
-          </div>
-          <div class="project-card">
-            <img src="img/SmartJobAppAssistant.png" alt="Smartjob Application Assistant">
-            <h3>Smartjob Application Assistant</h3>
-            <p>An excellent tool to help users to secure the jobs easily</p>
-            <a href="https://smart-job-application-assistant.vercel.app/" class="cta">Live Demo</a>
-          </div>
-          <div class="project-card">
-            <img src="img/nestech.png" alt=" Nakola Expert Systems">
-            <h3>Nakola Expert Systems</h3>
-            <p>A fully functional website for NES Company.</p>
-            <a href="https://nes-tech-systems.vercel.app/" class="cta">Live Demo</a>
-          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hidden lg:flex justify-center mt-12">
+          <a href="#featured" class="flex flex-col items-center gap-2 text-slate-500 hover:text-cyan-400 transition-colors" aria-label="Scroll to featured work">
+            <span class="text-xs font-mono uppercase tracking-widest">Scroll</span>
+            <div class="w-5 h-8 border border-slate-600 rounded-full flex justify-center pt-1.5">
+              <div class="w-1 h-2 bg-slate-400 rounded-full" style="animation: scroll-indicator 1.5s infinite"></div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="section-bg"></div>
-      <div class="content">
-        <h2>Contact Me</h2>
-        <p class="contact-description">Do you have a project or need help? Let’s collaborate! Fill out the contact form, and I’ll get back to you as soon as possible.</p>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-        <div class="contact-details">
-          <p>📧 <a href="mailto:luckiesdabwoy@gmail.com">luckiesdabwoy@gmail.com</a></p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/lucky-nakola-0a657a276?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BHAX2p28qTyC%2FvO9Iezd0vA%3D%3D" class="social-icon" aria-label="LinkedIn">Ln</a>
-            <a href="https://github.com/WAIYAH" class="social-icon" aria-label="GitHub">Gh</a>
-            <a href="https://www.facebook.com/lucky.loonkishu.7" class="social-icon" aria-label="Facebook">Fb</a>
-            <a href="https://wa.me/254715674828" class="social-icon" aria-label="WhatsApp">Wa</a>
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section id="featured" class="py-24 lg:py-32 bg-gradient-to-b from-[#030712] to-[#0f172a] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+          <div class="reveal">
+            <p class="section-label">Featured Work</p>
+            <h2 class="section-heading text-white">Selected <span class="text-gradient">Projects</span></h2>
+          </div>
+          <div class="reveal" style="transition-delay:100ms">
+            <a href="projects.html" class="text-sm text-cyan-400 hover:text-cyan-300 font-medium flex items-center gap-1 transition-colors">
+              View all projects
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+          <!-- SpendHack -->
+          <article class="card group">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/Spendhack.png" alt="SpendHack WhatsApp Chatbot" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">Python</span><span class="badge">WhatsApp API</span></div></div>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">SpendHack</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">AI-powered financial assistant built on WhatsApp — helping users track expenses and build smarter spending habits.</p>
+            <a href="https://spendhackv1.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
+              Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </article>
+
+          <!-- Smart Job Assistant -->
+          <article class="card group">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/SmartJobAppAssistant.png" alt="Smart Job Application Assistant" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">AI</span><span class="badge">JavaScript</span></div></div>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Smart Job Assistant</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">An intelligent tool that streamlines the job application process — helping users find, apply, and land opportunities faster.</p>
+            <a href="https://smart-job-application-assistant.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
+              Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </article>
+
+          <!-- Nakola Expert Systems -->
+          <article class="card group">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/nestech.png" alt="Nakola Expert Systems" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">Full Stack</span><span class="badge">Business</span></div></div>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Nakola Expert Systems</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">Full-featured company website for NES Tech — showcasing services, portfolio, and establishing digital business presence.</p>
+            <a href="https://nes-tech-systems.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
+              Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERTISE OVERVIEW ===== -->
+    <section class="py-24 lg:py-32 relative" style="background:#0a0f1c">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <p class="section-label justify-center">What I Do</p>
+          <h2 class="section-heading text-white">Turning Ideas Into <span class="text-gradient">Reality</span></h2>
+          <p class="mt-4 text-slate-400 max-w-2xl mx-auto">From AI-driven solutions to full-stack web platforms, I bridge the gap between complex technology and real-world impact.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+          <div class="card text-center p-8">
+            <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-cyan-500/10 flex items-center justify-center">
+              <svg class="w-7 h-7 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 14.5M14.25 3.104c.251.023.501.05.75.082M19.8 14.5l-2.147 2.146a.75.75 0 01-.532.22H6.879a.75.75 0 01-.53-.22L4.2 14.5"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-3">AI & Machine Learning</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Building intelligent systems — from chatbots and recommendation engines to predictive models that solve real problems.</p>
+          </div>
+          <div class="card text-center p-8">
+            <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-violet-500/10 flex items-center justify-center">
+              <svg class="w-7 h-7 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-3">Full-Stack Development</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Crafting responsive, performant web applications with modern frameworks and clean, maintainable architecture.</p>
+          </div>
+          <div class="card text-center p-8">
+            <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-amber-500/10 flex items-center justify-center">
+              <svg class="w-7 h-7 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-3">Community Impact</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Leveraging technology to uplift African communities — in education, healthcare, agriculture, and digital access.</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 reveal">
+          <a href="expertise.html" class="btn btn-secondary">
+            Explore My Expertise
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="py-24 lg:py-32 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-violet-500/5 to-cyan-500/5"></div>
+      <div class="grid-pattern"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div class="reveal">
+          <p class="section-label justify-center">Let's Collaborate</p>
+          <h2 class="section-heading text-white mb-6">Have a Project in Mind?</h2>
+          <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">I'm always open to discussing new projects, creative ideas, or opportunities to be part of something impactful.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="contact.html" class="btn btn-gold">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              Get In Touch
+            </a>
+            <a href="cv/view.html" class="btn btn-secondary">View My Resume</a>
           </div>
         </div>
       </div>
@@ -288,33 +315,56 @@
   </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-col about-col">
-        <p>Lucky Nakola – Software Developer passionate about AI, ML, and building scalable tech solutions for Africa.</p>
-        <a href="#about" class="footer-link">Learn more →</a>
-      </div>
-      <div class="footer-col contact-col">
-        <p class="cta-text">Let’s Connect – I’m open to collaborations, freelance work, and innovative ideas.</p>
-        <p>📧 <a href="mailto:luckiesdabwoy@gmail.com">luckiesdabwoy@gmail.com</a></p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/lucky-nakola-0a657a276?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BHAX2p28qTyC%2FvO9Iezd0vA%3D%3D" class="social-icon" aria-label="LinkedIn">Ln</a>
-          <a href="https://github.com/WAIYAH" class="social-icon" aria-label="GitHub">Gh</a>
-          <a href="https://www.facebook.com/lucky.loonkishu.7" class="social-icon" aria-label="Facebook">Fb</a>
-          <a href="https://wa.me/254715674828" class="social-icon" aria-label="WhatsApp">Wa</a>
+  <footer class="footer-gradient pt-16 pb-8 border-t border-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="index.html" class="inline-flex items-center gap-2 mb-4"><span class="text-2xl font-bold font-display text-gradient">LN</span></a>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">Software Engineer & AI Innovator building impactful digital solutions for Africa and beyond.</p>
+          <div class="flex gap-3">
+            <a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400/30 transition-all duration-300" aria-label="GitHub"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.332-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            <a href="https://www.linkedin.com/in/lucky-nakola-0a657a276" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-400/30 transition-all duration-300" aria-label="LinkedIn"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://wa.me/254715674828" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-emerald-400 hover:border-emerald-400/30 transition-all duration-300" aria-label="WhatsApp"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-sm text-white mb-4">Navigation</h4>
+          <ul class="space-y-2.5">
+            <li><a href="about.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">About</a></li>
+            <li><a href="expertise.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Expertise</a></li>
+            <li><a href="projects.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Projects</a></li>
+            <li><a href="insights.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Insights</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-sm text-white mb-4">Resources</h4>
+          <ul class="space-y-2.5">
+            <li><a href="cv/view.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Resume</a></li>
+            <li><a href="cv/download.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Download CV</a></li>
+            <li><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-sm text-white mb-4">Get in Touch</h4>
+          <ul class="space-y-2.5">
+            <li><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">luckiesdabwoy@gmail.com</a></li>
+            <li><a href="https://wa.me/254715674828" target="_blank" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">+254 715 674 828</a></li>
+            <li><span class="text-sm text-slate-400">Nairobi, Kenya 🇰🇪</span></li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div class="footer-marquee">
-      <p class="marquee-text">🚀 Innovating through AI and software development to build impactful solutions for Africa. – Lucky Nakola 🌍</p>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Lucky Nakola. All Rights Reserved.</p>
-      <p class="branding">💛 Built with Passion, Vision, and Code.</p>
-    </div>
-    <div class="scroll-top">
-      <a href="#home" aria-label="Scroll to top">↑</a>
+      <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">© 2026 Lucky Nakola. Crafted with precision and purpose.</p>
+        <p class="text-xs text-slate-600 font-mono">v2.0 — Built with semantic HTML, Tailwind CSS & vanilla JS</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top-btn" aria-label="Scroll to top">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/app.js"></script>
 </body>
 </html>

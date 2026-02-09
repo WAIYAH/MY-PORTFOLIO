@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Lucky Nakola — A passionate software engineer and AI innovator dedicated to building technology that uplifts communities across Africa.">
+  <title>About — Lucky Nakola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Space Grotesk','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body class="loading">
+  <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+
+  <!-- Nav -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Home"><span class="text-2xl font-bold font-display text-gradient">LN</span><span class="hidden sm:inline text-sm font-medium text-slate-400">Lucky Nakola</span></a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-page="home">Home</a>
+          <a href="about.html" class="nav-link active" data-page="about">About</a>
+          <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
+          <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+          <a href="insights.html" class="nav-link" data-page="insights">Insights</a>
+          <a href="contact.html" class="btn btn-primary text-xs !py-2 !px-5" data-page="contact">Let's Talk</a>
+        </div>
+        <button class="md:hidden p-2 -mr-2" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger"><span></span><span></span><span></span></div></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="flex flex-col items-center gap-4">
+      <a href="index.html" class="nav-link" data-page="home">Home</a>
+      <a href="about.html" class="nav-link" data-page="about">About</a>
+      <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
+      <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+      <a href="insights.html" class="nav-link" data-page="insights">Insights</a>
+      <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
+      <a href="cv/view.html" class="nav-link" data-page="cv">Resume</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-20 hero-gradient relative overflow-hidden">
+      <div class="grid-pattern"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal">
+          <p class="section-label">Get to Know Me</p>
+          <h1 class="section-heading text-white max-w-2xl">The Story Behind <span class="text-gradient">the Code</span></h1>
+          <p class="mt-4 text-lg text-slate-400 max-w-xl">Engineer by profession, innovator by passion, community builder by choice.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-20 lg:py-28" style="background:#0a0f1c">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+          <!-- Photo + Quick Facts -->
+          <div class="lg:col-span-2">
+            <div class="reveal-scale sticky top-28">
+              <div class="relative rounded-2xl overflow-hidden mb-8 border border-slate-800">
+                <img src="img/Lucky.jpg" alt="Lucky Nakola" class="w-full aspect-[4/5] object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
+                    <span class="text-xs text-emerald-400 font-medium">Open to opportunities</span>
+                  </div>
+                  <p class="text-sm text-slate-300">📍 Nairobi, Kenya</p>
+                </div>
+              </div>
+
+              <!-- Quick facts -->
+              <div class="space-y-3">
+                <div class="card !p-4 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-500">Education</p>
+                    <p class="text-sm text-slate-300 font-medium">BSc Software Development — KCA University</p>
+                  </div>
+                </div>
+                <div class="card !p-4 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-500">Current Focus</p>
+                    <p class="text-sm text-slate-300 font-medium">AI/ML, Full-Stack Web Development</p>
+                  </div>
+                </div>
+                <div class="card !p-4 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-slate-500">Mission</p>
+                    <p class="text-sm text-slate-300 font-medium">Tech solutions that uplift African communities</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narrative -->
+          <div class="lg:col-span-3">
+            <div class="reveal">
+              <h2 class="font-display text-3xl font-bold text-white mb-6">Building at the Intersection of <span class="text-gradient">AI and Impact</span></h2>
+              <div class="prose prose-lg">
+                <p class="text-slate-300 leading-relaxed mb-6">I'm Lucky Nakola — a software engineer and AI enthusiast based in Nairobi, Kenya. I live at the intersection of technology and community impact, driven by the belief that great software can change lives.</p>
+                <p class="text-slate-400 leading-relaxed mb-6">My journey started with a fascination for how things work — from tinkering with code during my BTEC studies at Mpesa Foundation Academy to building AI-powered tools that solve real problems for businesses and communities.</p>
+                <p class="text-slate-400 leading-relaxed mb-8">Today, I specialize in full-stack web development and artificial intelligence, with a particular focus on building solutions for the African context — education platforms, financial tools, healthcare systems, and community infrastructure.</p>
+              </div>
+            </div>
+
+            <!-- Philosophy Quote -->
+            <blockquote class="reveal card !p-6 !border-l-4 !border-l-cyan-500 !rounded-l-none mb-12">
+              <p class="text-lg text-slate-200 italic font-medium leading-relaxed">"I live for the thrill of hackathons, the joy of mentoring, and the dream of a tech-powered future where every community has access to the digital tools they deserve."</p>
+              <cite class="block mt-3 text-sm text-slate-500 not-italic">— Lucky Nakola</cite>
+            </blockquote>
+
+            <!-- Interests -->
+            <div class="reveal mb-12">
+              <h3 class="font-display text-xl font-semibold text-white mb-6">Beyond the Code</h3>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/30 border border-slate-800/50">
+                  <span class="text-xl">🎮</span>
+                  <span class="text-sm text-slate-300">Gaming & AI Innovations</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/30 border border-slate-800/50">
+                  <span class="text-xl">📚</span>
+                  <span class="text-sm text-slate-300">Tech Blogging & Knowledge Sharing</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/30 border border-slate-800/50">
+                  <span class="text-xl">🚀</span>
+                  <span class="text-sm text-slate-300">Building Scalable Applications</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/30 border border-slate-800/50">
+                  <span class="text-xl">🎤</span>
+                  <span class="text-sm text-slate-300">Speaking at Tech Events</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="reveal">
+              <h3 class="font-display text-xl font-semibold text-white mb-8">My Journey</h3>
+
+              <div class="relative pl-8">
+                <div class="timeline-line"></div>
+
+                <!-- Experience -->
+                <div class="timeline-item mb-8 relative flex gap-4">
+                  <div class="timeline-dot mt-1"></div>
+                  <div class="flex-1 -mt-1">
+                    <span class="badge badge-emerald text-xs mb-2">Feb 2025 — May 2025</span>
+                    <h4 class="font-display font-semibold text-white">Software & ICT Support Intern</h4>
+                    <p class="text-sm text-cyan-400 mb-1">Kenya Institute of Curriculum Development</p>
+                    <p class="text-sm text-slate-400">Worked on AI-driven chatbots and data analytics solutions for institutional use.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item mb-8 relative flex gap-4">
+                  <div class="timeline-dot mt-1"></div>
+                  <div class="flex-1 -mt-1">
+                    <span class="badge badge-emerald text-xs mb-2">Sept 2024 — Dec 2024</span>
+                    <h4 class="font-display font-semibold text-white">ICT Attachee</h4>
+                    <p class="text-sm text-cyan-400 mb-1">Kenya National Library Service</p>
+                    <p class="text-sm text-slate-400">Contributed to educational platforms, including the ICT Support Platform for KNLS.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item mb-8 relative flex gap-4">
+                  <div class="timeline-dot mt-1"></div>
+                  <div class="flex-1 -mt-1">
+                    <span class="badge badge-emerald text-xs mb-2">2023 — Present</span>
+                    <h4 class="font-display font-semibold text-white">Freelance Web Developer</h4>
+                    <p class="text-sm text-cyan-400 mb-1">Self-Employed</p>
+                    <p class="text-sm text-slate-400">Developed responsive websites for small businesses, including Kanunka FC and NES Tech.</p>
+                  </div>
+                </div>
+
+                <!-- Education -->
+                <div class="mt-10 mb-6">
+                  <h4 class="text-xs font-mono text-slate-500 uppercase tracking-wider">Education</h4>
+                </div>
+
+                <div class="timeline-item mb-8 relative flex gap-4">
+                  <div class="timeline-dot mt-1"></div>
+                  <div class="flex-1 -mt-1">
+                    <span class="badge text-xs mb-2">May 2025 — Dec 2027</span>
+                    <h4 class="font-display font-semibold text-white">BSc Software Development</h4>
+                    <p class="text-sm text-cyan-400 mb-1">KCA University</p>
+                    <p class="text-sm text-slate-400">Advanced studies in software engineering, systems design, and emerging technologies.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item mb-8 relative flex gap-4">
+                  <div class="timeline-dot mt-1"></div>
+                  <div class="flex-1 -mt-1">
+                    <span class="badge text-xs mb-2">Feb 2025 — Aug 2025</span>
+                    <h4 class="font-display font-semibold text-white">PLP Software Engineering Scholarship</h4>
+                    <p class="text-sm text-cyan-400 mb-1">Power Learn Project</p>
+                    <p class="text-sm text-slate-400">Intensive training in software engineering, enhancing practical skills and industry readiness.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item mb-8 relative flex gap-4">
+                  <div class="timeline-dot mt-1"></div>
+                  <div class="flex-1 -mt-1">
+                    <span class="badge text-xs mb-2">May 2022 — Dec 2024</span>
+                    <h4 class="font-display font-semibold text-white">Diploma in Computer Science</h4>
+                    <p class="text-sm text-cyan-400 mb-1">Riara University</p>
+                    <p class="text-sm text-slate-400">Mastered foundational coding, database management, and software development skills.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item relative flex gap-4">
+                  <div class="timeline-dot mt-1"></div>
+                  <div class="flex-1 -mt-1">
+                    <span class="badge text-xs mb-2">Jan 2018 — May 2022</span>
+                    <h4 class="font-display font-semibold text-white">BTEC Level 3 Engineering & IBCP</h4>
+                    <p class="text-sm text-cyan-400 mb-1">Mpesa Foundation Academy</p>
+                    <p class="text-sm text-slate-400">Studied Maths AI, Engineering principles, Reflective Project, Service Learning, and French.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 relative overflow-hidden" style="background:#030712">
+      <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-violet-500/5"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+        <h2 class="font-display text-3xl font-bold text-white mb-4">Want to Work Together?</h2>
+        <p class="text-slate-400 mb-8 max-w-lg mx-auto">I'm always excited to connect with like-minded people and explore new opportunities.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+          <a href="cv/view.html" class="btn btn-secondary">View Resume</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-gradient pt-16 pb-8 border-t border-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="index.html" class="inline-flex items-center gap-2 mb-4"><span class="text-2xl font-bold font-display text-gradient">LN</span></a>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">Software Engineer & AI Innovator building impactful digital solutions for Africa and beyond.</p>
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-sm text-white mb-4">Navigation</h4>
+          <ul class="space-y-2.5">
+            <li><a href="about.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">About</a></li>
+            <li><a href="expertise.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Expertise</a></li>
+            <li><a href="projects.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Projects</a></li>
+            <li><a href="insights.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Insights</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-sm text-white mb-4">Resources</h4>
+          <ul class="space-y-2.5">
+            <li><a href="cv/view.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Resume</a></li>
+            <li><a href="cv/download.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Download CV</a></li>
+            <li><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-semibold text-sm text-white mb-4">Get in Touch</h4>
+          <ul class="space-y-2.5">
+            <li><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">luckiesdabwoy@gmail.com</a></li>
+            <li><a href="https://wa.me/254715674828" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">+254 715 674 828</a></li>
+            <li><span class="text-sm text-slate-400">Nairobi, Kenya 🇰🇪</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">© 2026 Lucky Nakola. Crafted with precision and purpose.</p>
+        <p class="text-xs text-slate-600 font-mono">v2.0</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" aria-label="Scroll to top"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
+  <script src="js/app.js"></script>
+</body>
+</html>

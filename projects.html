@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lucky Nakola's project portfolio — AI tools, web applications, and community platforms that drive real-world impact.">
+  <title>Projects — Lucky Nakola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Space Grotesk','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body class="loading">
+  <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+
+  <!-- Nav -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Home"><span class="text-2xl font-bold font-display text-gradient">LN</span><span class="hidden sm:inline text-sm font-medium text-slate-400">Lucky Nakola</span></a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-page="home">Home</a>
+          <a href="about.html" class="nav-link" data-page="about">About</a>
+          <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
+          <a href="projects.html" class="nav-link active" data-page="projects">Projects</a>
+          <a href="insights.html" class="nav-link" data-page="insights">Insights</a>
+          <a href="contact.html" class="btn btn-primary text-xs !py-2 !px-5" data-page="contact">Let's Talk</a>
+        </div>
+        <button class="md:hidden p-2 -mr-2" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger"><span></span><span></span><span></span></div></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="flex flex-col items-center gap-4">
+      <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="expertise.html" class="nav-link">Expertise</a><a href="projects.html" class="nav-link">Projects</a><a href="insights.html" class="nav-link">Insights</a><a href="contact.html" class="nav-link">Contact</a><a href="cv/view.html" class="nav-link">Resume</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Header -->
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-20 hero-gradient relative overflow-hidden">
+      <div class="grid-pattern"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal">
+          <p class="section-label">Portfolio</p>
+          <h1 class="section-heading text-white max-w-2xl">Selected <span class="text-gradient">Projects</span></h1>
+          <p class="mt-4 text-lg text-slate-400 max-w-xl">A curated collection of work showcasing AI tools, web applications, and community platforms that solve real problems.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-20 lg:py-28" style="background:#0a0f1c">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Filter Buttons -->
+        <div class="reveal flex flex-wrap gap-3 mb-12">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai">AI / ML</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="business">Business</button>
+        </div>
+
+        <!-- Projects -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- SpendHack -->
+          <article class="project-item card group" data-category="ai" style="transition: opacity 0.3s, transform 0.3s">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/Spendhack.png" alt="SpendHack WhatsApp Chatbot" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">Python</span><span class="badge">WhatsApp API</span><span class="badge badge-gold">AI</span></div></div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-emerald text-xs">Live</span>
+              <span class="text-xs text-slate-500">AI / FinTech</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">SpendHack</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">AI-powered financial assistant built on WhatsApp — helping users track expenses, set budgets, and build smarter spending habits through conversational AI.</p>
+            <div class="flex gap-3">
+              <a href="https://spendhackv1.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Smart Job Assistant -->
+          <article class="project-item card group" data-category="ai" style="transition: opacity 0.3s, transform 0.3s">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/SmartJobAppAssistant.png" alt="Smart Job Application Assistant" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">AI</span><span class="badge">JavaScript</span></div></div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-emerald text-xs">Live</span>
+              <span class="text-xs text-slate-500">AI / Productivity</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Smart Job Assistant</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">An intelligent tool that streamlines the job application process — helping users craft applications, track progress, and land opportunities faster.</p>
+            <div class="flex gap-3">
+              <a href="https://smart-job-application-assistant.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Nakola Expert Systems -->
+          <article class="project-item card group" data-category="business" style="transition: opacity 0.3s, transform 0.3s">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/nestech.png" alt="Nakola Expert Systems" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">Full Stack</span><span class="badge">Business</span></div></div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-emerald text-xs">Live</span>
+              <span class="text-xs text-slate-500">Business / Web</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Nakola Expert Systems</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">Full-featured company website for NES Tech — showcasing services, portfolio, and establishing a professional digital business presence.</p>
+            <div class="flex gap-3">
+              <a href="https://nes-tech-systems.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Kanunka FC -->
+          <article class="project-item card group" data-category="web" style="transition: opacity 0.3s, transform 0.3s">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/Kanunka Cranes.png" alt="Kanunka FC Website" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span></div></div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-emerald text-xs">Live</span>
+              <span class="text-xs text-slate-500">Sports / Community</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Kanunka FC</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">Dynamic football club website featuring team rosters, match schedules, and community engagement — bringing a local sports club online.</p>
+            <div class="flex gap-3">
+              <a href="https://the-cranes.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </article>
+
+          <!-- TechMart -->
+          <article class="project-item card group" data-category="web" style="transition: opacity 0.3s, transform 0.3s">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/Tech-Mart.png" alt="TechMart E-Commerce" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">E-Commerce</span><span class="badge">JavaScript</span></div></div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-emerald text-xs">Live</span>
+              <span class="text-xs text-slate-500">E-Commerce</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">TechMart</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">Modern e-commerce platform with product catalogs, cart functionality, and a sleek user interface for technology products.</p>
+            <div class="flex gap-3">
+              <a href="https://tech-mart-jade.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Fresh Foods -->
+          <article class="project-item card group" data-category="web" style="transition: opacity 0.3s, transform 0.3s">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/FreshFood.png" alt="Fresh Foods Website" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span></div></div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-emerald text-xs">Live</span>
+              <span class="text-xs text-slate-500">Food / Lifestyle</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Fresh Foods</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">Clean, appetizing web platform for fresh food delivery — featuring product listings, nutritional information, and order workflows.</p>
+            <div class="flex gap-3">
+              <a href="https://wk-8-web-development.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </article>
+
+          <!-- First Aid Guru -->
+          <article class="project-item card group" data-category="ai" style="transition: opacity 0.3s, transform 0.3s">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/FirstAidGuru.png" alt="First Aid Guru" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">Health</span><span class="badge">JavaScript</span></div></div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-emerald text-xs">Live</span>
+              <span class="text-xs text-slate-500">Health / Education</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">First Aid Guru</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">Interactive first-aid education platform — providing step-by-step guidance for emergency response and healthcare awareness.</p>
+            <div class="flex gap-3">
+              <a href="https://week8-final.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </article>
+
+          <!-- My-SwifTiba -->
+          <article class="project-item card group" data-category="web" style="transition: opacity 0.3s, transform 0.3s">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/My-Swifttiba.png" alt="My-SwifTiba" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">Education</span><span class="badge">Web App</span></div></div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge text-xs">In Progress</span>
+              <span class="text-xs text-slate-500">Education</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">My-SwifTiba</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">Educational content delivery platform — making learning accessible and engaging through structured courses and interactive materials.</p>
+          </article>
+
+          <!-- Replicate -->
+          <article class="project-item card group" data-category="web" style="transition: opacity 0.3s, transform 0.3s">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/Replicate.png" alt="Replicate" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">UI Clone</span><span class="badge">CSS</span></div></div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-emerald text-xs">Live</span>
+              <span class="text-xs text-slate-500">Frontend / Practice</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Replicate</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">Pixel-perfect UI replication project — demonstrating attention to detail and frontend craftsmanship through faithful design reproduction.</p>
+            <div class="flex gap-3">
+              <a href="https://replicate-topaz.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+          </article>
+
+          <!-- Nakola Dev -->
+          <article class="project-item card group" data-category="web" style="transition: opacity 0.3s, transform 0.3s">
+            <div class="relative overflow-hidden rounded-lg mb-4">
+              <img src="img/NakolaDev.png" alt="Nakola Dev Portfolio" class="card-image" loading="lazy" width="600" height="375">
+              <div class="project-overlay"><div class="flex gap-2"><span class="badge">Portfolio</span><span class="badge">HTML/CSS</span></div></div>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-emerald text-xs">Live</span>
+              <span class="text-xs text-slate-500">Portfolio / Personal</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Nakola Dev</h3>
+            <p class="text-sm text-slate-400 mb-4 leading-relaxed">Earlier iteration of my developer portfolio — showcasing project work, skills, and professional journey in a clean, modern layout.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 relative overflow-hidden" style="background:#030712">
+      <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-violet-500/5"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+        <h2 class="font-display text-3xl font-bold text-white mb-4">Have an Idea? Let's Build It.</h2>
+        <p class="text-slate-400 mb-8 max-w-lg mx-auto">I'm always looking for interesting projects and collaborations. Let's turn your vision into reality.</p>
+        <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-gradient pt-16 pb-8 border-t border-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1"><a href="index.html" class="inline-flex items-center gap-2 mb-4"><span class="text-2xl font-bold font-display text-gradient">LN</span></a><p class="text-sm text-slate-400 leading-relaxed mb-4">Software Engineer & AI Innovator building impactful digital solutions.</p></div>
+        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Navigation</h4><ul class="space-y-2.5"><li><a href="about.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">About</a></li><li><a href="expertise.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Expertise</a></li><li><a href="projects.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Projects</a></li><li><a href="insights.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Insights</a></li></ul></div>
+        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Resources</h4><ul class="space-y-2.5"><li><a href="cv/view.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Resume</a></li><li><a href="cv/download.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Download CV</a></li><li><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a></li></ul></div>
+        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Get in Touch</h4><ul class="space-y-2.5"><li><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">luckiesdabwoy@gmail.com</a></li><li><a href="https://wa.me/254715674828" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">+254 715 674 828</a></li><li><span class="text-sm text-slate-400">Nairobi, Kenya 🇰🇪</span></li></ul></div>
+      </div>
+      <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4"><p class="text-xs text-slate-500">© 2026 Lucky Nakola.</p><p class="text-xs text-slate-600 font-mono">v2.0</p></div>
+    </div>
+  </footer>
+  <button class="scroll-top-btn" aria-label="Scroll to top"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
+  <script src="js/app.js"></script>
+</body>
+</html>

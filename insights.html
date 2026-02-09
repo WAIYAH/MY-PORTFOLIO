@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical insights, perspectives, and thought leadership from Lucky Nakola — on AI, software engineering, and building for impact.">
+  <title>Insights — Lucky Nakola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Space Grotesk','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body class="loading">
+  <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+
+  <!-- Nav -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Home"><span class="text-2xl font-bold font-display text-gradient">LN</span><span class="hidden sm:inline text-sm font-medium text-slate-400">Lucky Nakola</span></a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-page="home">Home</a>
+          <a href="about.html" class="nav-link" data-page="about">About</a>
+          <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
+          <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+          <a href="insights.html" class="nav-link active" data-page="insights">Insights</a>
+          <a href="contact.html" class="btn btn-primary text-xs !py-2 !px-5" data-page="contact">Let's Talk</a>
+        </div>
+        <button class="md:hidden p-2 -mr-2" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger"><span></span><span></span><span></span></div></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="flex flex-col items-center gap-4">
+      <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="expertise.html" class="nav-link">Expertise</a><a href="projects.html" class="nav-link">Projects</a><a href="insights.html" class="nav-link">Insights</a><a href="contact.html" class="nav-link">Contact</a><a href="cv/view.html" class="nav-link">Resume</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Header -->
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-20 hero-gradient relative overflow-hidden">
+      <div class="grid-pattern"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal">
+          <p class="section-label">Thoughts & Perspectives</p>
+          <h1 class="section-heading text-white max-w-2xl">Technical <span class="text-gradient">Insights</span></h1>
+          <p class="mt-4 text-lg text-slate-400 max-w-xl">Perspectives on AI, software engineering, community-driven technology, and the future of tech in Africa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="py-20 lg:py-28" style="background:#0a0f1c">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Featured -->
+        <div class="reveal mb-16">
+          <article class="card !p-0 overflow-hidden grid md:grid-cols-2">
+            <div class="bg-gradient-to-br from-cyan-500/10 to-violet-500/10 p-8 md:p-12 flex flex-col justify-center">
+              <span class="badge badge-gold w-fit mb-4">Featured</span>
+              <h2 class="font-display text-2xl md:text-3xl font-bold text-white mb-4">Why Africa Needs More AI-First Developers</h2>
+              <p class="text-slate-400 leading-relaxed mb-6">The next wave of innovation won't come from Silicon Valley alone. Africa's unique challenges — in healthcare, agriculture, finance, and education — demand AI solutions built by people who understand the context.</p>
+              <div class="flex items-center gap-4">
+                <img src="img/Lucky.jpg" alt="Lucky Nakola" class="w-10 h-10 rounded-full object-cover" width="40" height="40">
+                <div>
+                  <p class="text-sm font-medium text-white">Lucky Nakola</p>
+                  <p class="text-xs text-slate-500">February 2026 · 6 min read</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8 md:p-12 flex flex-col justify-center bg-slate-900/30">
+              <h3 class="font-display font-semibold text-lg text-white mb-4">Key Takeaways</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 mt-0.5 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                  <span class="text-sm text-slate-400">Africa's population of 1.4B+ represents the largest untapped AI market globally</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 mt-0.5 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                  <span class="text-sm text-slate-400">Local context matters — AI models need to understand African languages, infrastructure, and culture</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 mt-0.5 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                  <span class="text-sm text-slate-400">Tools like WhatsApp API enable AI to reach millions without requiring smartphone apps</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="mb-12 reveal">
+          <h2 class="font-display text-2xl font-bold text-white mb-2">More Perspectives</h2>
+          <p class="text-slate-400">Thoughts on technology, engineering, and impact.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+          <!-- Article 2 -->
+          <article class="card group">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="badge">AI / ML</span>
+              <span class="text-xs text-slate-500">5 min read</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-3 group-hover:text-cyan-400 transition-colors">Building Conversational AI for Financial Literacy</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">How I built SpendHack — a WhatsApp chatbot that helps young professionals track expenses and make smarter financial decisions using AI.</p>
+            <div class="flex items-center gap-2 text-xs text-slate-500">
+              <span>January 2026</span>
+              <span>·</span>
+              <span>Case Study</span>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="card group">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="badge badge-violet">Engineering</span>
+              <span class="text-xs text-slate-500">4 min read</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-3 group-hover:text-cyan-400 transition-colors">The Art of Building Responsive Websites in 2026</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">Mobile-first isn't enough anymore. Modern responsive design means adapting to context — device, network speed, user preferences, and accessibility needs.</p>
+            <div class="flex items-center gap-2 text-xs text-slate-500">
+              <span>December 2025</span>
+              <span>·</span>
+              <span>Technical</span>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="card group">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="badge badge-emerald">Community</span>
+              <span class="text-xs text-slate-500">3 min read</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-3 group-hover:text-cyan-400 transition-colors">What Hackathons Taught Me About Problem Solving</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">The pressure of building under time constraints forces you to think differently. Here are the lessons I carry into every project.</p>
+            <div class="flex items-center gap-2 text-xs text-slate-500">
+              <span>November 2025</span>
+              <span>·</span>
+              <span>Personal</span>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="card group">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="badge badge-gold">Career</span>
+              <span class="text-xs text-slate-500">6 min read</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-3 group-hover:text-cyan-400 transition-colors">From Diploma to BSc: My Non-Linear Tech Journey</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">The path to becoming a software engineer doesn't have to be straight. Here's how I turned detours into advantages.</p>
+            <div class="flex items-center gap-2 text-xs text-slate-500">
+              <span>October 2025</span>
+              <span>·</span>
+              <span>Personal</span>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="card group">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="badge">AI / ML</span>
+              <span class="text-xs text-slate-500">5 min read</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-3 group-hover:text-cyan-400 transition-colors">Prompt Engineering: The Underrated Developer Skill</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">In the age of AI-assisted development, knowing how to communicate with AI models is becoming as important as knowing how to code.</p>
+            <div class="flex items-center gap-2 text-xs text-slate-500">
+              <span>September 2025</span>
+              <span>·</span>
+              <span>Technical</span>
+            </div>
+          </article>
+
+          <!-- Article 7 -->
+          <article class="card group">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="badge badge-violet">Engineering</span>
+              <span class="text-xs text-slate-500">4 min read</span>
+            </div>
+            <h3 class="font-display font-semibold text-lg text-white mb-3 group-hover:text-cyan-400 transition-colors">Why Every Developer Should Understand UI/UX</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">Writing code is only half the equation. Understanding the human side of software makes you a fundamentally better engineer.</p>
+            <div class="flex items-center gap-2 text-xs text-slate-500">
+              <span>August 2025</span>
+              <span>·</span>
+              <span>Opinion</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 relative overflow-hidden" style="background:#030712">
+      <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-violet-500/5"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+        <h2 class="font-display text-3xl font-bold text-white mb-4">Want to Discuss Ideas?</h2>
+        <p class="text-slate-400 mb-8 max-w-lg mx-auto">I love connecting with fellow engineers, thinkers, and builders. Let's start a conversation.</p>
+        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-gradient pt-16 pb-8 border-t border-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1"><a href="index.html" class="inline-flex items-center gap-2 mb-4"><span class="text-2xl font-bold font-display text-gradient">LN</span></a><p class="text-sm text-slate-400 leading-relaxed mb-4">Software Engineer & AI Innovator building impactful digital solutions.</p></div>
+        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Navigation</h4><ul class="space-y-2.5"><li><a href="about.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">About</a></li><li><a href="expertise.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Expertise</a></li><li><a href="projects.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Projects</a></li><li><a href="insights.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Insights</a></li></ul></div>
+        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Resources</h4><ul class="space-y-2.5"><li><a href="cv/view.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Resume</a></li><li><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a></li></ul></div>
+        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Get in Touch</h4><ul class="space-y-2.5"><li><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">luckiesdabwoy@gmail.com</a></li><li><span class="text-sm text-slate-400">Nairobi, Kenya 🇰🇪</span></li></ul></div>
+      </div>
+      <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4"><p class="text-xs text-slate-500">© 2026 Lucky Nakola.</p><p class="text-xs text-slate-600 font-mono">v2.0</p></div>
+    </div>
+  </footer>
+  <button class="scroll-top-btn" aria-label="Scroll to top"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
+  <script src="js/app.js"></script>
+</body>
+</html>

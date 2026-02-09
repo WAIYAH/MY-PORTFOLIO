@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print Resume — Lucky Nakola</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 14px; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: #1e293b; background: #fff; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 40px 32px; }
+
+    /* Print controls — hidden on print */
+    .print-controls { display: flex; gap: 12px; justify-content: center; margin-bottom: 32px; }
+    .print-controls button, .print-controls a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; font-size: 13px; font-weight: 600; border-radius: 8px; cursor: pointer; text-decoration: none; border: none; transition: all .2s; }
+    .print-btn { background: #06b6d4; color: #fff; }
+    .print-btn:hover { background: #0891b2; }
+    .back-btn { background: #f1f5f9; color: #475569; }
+    .back-btn:hover { background: #e2e8f0; }
+
+    h1 { font-size: 1.75rem; font-weight: 800; color: #0f172a; margin-bottom: 2px; }
+    h2 { font-size: 1rem; font-weight: 700; color: #0f172a; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid #06b6d4; padding-bottom: 4px; margin-top: 24px; margin-bottom: 12px; }
+    h3 { font-size: 0.875rem; font-weight: 600; color: #0f172a; }
+
+    .header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px; }
+    .header p { color: #64748b; font-size: 0.85rem; }
+    .header .title { color: #06b6d4; font-weight: 600; font-size: 0.95rem; }
+    .header .contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px; }
+    .header .contact-row span { color: #475569; font-size: 0.8rem; }
+
+    .summary { color: #475569; font-size: 0.85rem; margin-bottom: 4px; }
+
+    .entry { margin-bottom: 14px; }
+    .entry-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+    .entry-header .date { color: #06b6d4; font-size: 0.75rem; font-weight: 500; white-space: nowrap; }
+    .entry .org { color: #6366f1; font-size: 0.8rem; font-weight: 500; }
+    .entry ul { padding-left: 18px; margin-top: 4px; }
+    .entry ul li { color: #475569; font-size: 0.8rem; margin-bottom: 2px; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 16px; }
+    .skills-grid span { color: #475569; font-size: 0.8rem; padding: 2px 0; }
+
+    .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .project { border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 10px; }
+    .project h3 { font-size: 0.8rem; }
+    .project p { font-size: 0.75rem; color: #64748b; }
+
+    .certs li { color: #475569; font-size: 0.8rem; padding: 2px 0; list-style: none; }
+    .certs li::before { content: "★ "; color: #eab308; }
+
+    @media print {
+      body { padding: 0; }
+      .print-controls { display: none !important; }
+      @page { margin: 1.5cm; size: A4; }
+      h2 { break-after: avoid; }
+      .entry { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-controls">
+    <button class="print-btn" onclick="window.print()">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+      Print Resume
+    </button>
+    <a href="view.html" class="back-btn">← Back to Interactive View</a>
+  </div>
+
+  <div class="header">
+    <h1>Lucky Nakola</h1>
+    <p class="title">Software Engineer & AI Innovator</p>
+    <div class="contact-row">
+      <span>📧 luckiesdabwoy@gmail.com</span>
+      <span>📞 +254 715 674 828</span>
+      <span>📍 Nairobi, Kenya</span>
+      <span>🔗 github.com/WAIYAH</span>
+    </div>
+  </div>
+
+  <p class="summary">Passionate Software Engineer and AI innovator with hands-on experience in full-stack web development, machine learning integration, and user-centered design. Currently pursuing a BSc in Software Engineering at KCA University. Builder of impactful digital solutions — from AI-powered chatbots to responsive business platforms.</p>
+
+  <h2>Work Experience</h2>
+
+  <div class="entry">
+    <div class="entry-header">
+      <h3>ICT Intern</h3>
+      <span class="date">Sep 2023 – Nov 2023</span>
+    </div>
+    <p class="org">Kenya Institute of Curriculum Development (KICD)</p>
+    <ul>
+      <li>Provided technical support for ICT infrastructure and end-user troubleshooting</li>
+      <li>Assisted in maintaining internal web systems and network configuration</li>
+      <li>Collaborated with development team on curriculum digitization projects</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <h3>IT Attachee</h3>
+      <span class="date">May 2023 – Aug 2023</span>
+    </div>
+    <p class="org">Kenya National Library Service (KNLS)</p>
+    <ul>
+      <li>Managed digital cataloging systems and database maintenance</li>
+      <li>Provided user support and IT troubleshooting across library branches</li>
+      <li>Assisted in website content updates and digital resource management</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <h3>Freelance Web Developer</h3>
+      <span class="date">2022 – Present</span>
+    </div>
+    <p class="org">Self-Employed</p>
+    <ul>
+      <li>Design and develop responsive websites for small businesses and organizations</li>
+      <li>Built 10+ projects including AI chatbots, e-commerce platforms, and portfolio sites</li>
+      <li>Manage full project lifecycle from client consultation to deployment</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+
+  <div class="entry">
+    <div class="entry-header"><h3>BSc Software Engineering</h3><span class="date">2025 – 2027</span></div>
+    <p class="org">KCA University</p>
+  </div>
+  <div class="entry">
+    <div class="entry-header"><h3>Software Engineering Scholarship</h3><span class="date">2025</span></div>
+    <p class="org">Power Learn Project (PLP)</p>
+  </div>
+  <div class="entry">
+    <div class="entry-header"><h3>Diploma in ICT</h3><span class="date">2022 – 2024</span></div>
+    <p class="org">Riara University</p>
+  </div>
+  <div class="entry">
+    <div class="entry-header"><h3>BTEC Level 3 in Information Technology</h3><span class="date">2018 – 2022</span></div>
+    <p class="org">Mpesa Foundation Academy</p>
+  </div>
+
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+    <span>Python</span><span>HTML5 / CSS3</span><span>JavaScript</span>
+    <span>PHP</span><span>SQL / MySQL</span><span>Bootstrap</span>
+    <span>Tailwind CSS</span><span>Git / GitHub</span><span>AI / ML Integration</span>
+    <span>UI/UX Design</span><span>REST APIs</span><span>Responsive Design</span>
+  </div>
+
+  <h2>Notable Projects</h2>
+  <div class="projects-grid">
+    <div class="project">
+      <h3>SpendHack AI</h3>
+      <p>AI WhatsApp chatbot for financial literacy & expense tracking</p>
+    </div>
+    <div class="project">
+      <h3>Smart Job Assistant</h3>
+      <p>AI career companion with job matching & skill recommendations</p>
+    </div>
+    <div class="project">
+      <h3>NES Tech Hub</h3>
+      <p>Full-stack business platform for a technology solutions company</p>
+    </div>
+    <div class="project">
+      <h3>First Aid Guru</h3>
+      <p>AI emergency guidance chatbot with real-time instructions</p>
+    </div>
+  </div>
+
+  <h2>Certifications & Awards</h2>
+  <ul class="certs">
+    <li>PLP Software Engineering Scholarship — 2025</li>
+    <li>BTEC Level 3 Distinction in Information Technology — 2022</li>
+  </ul>
+</body>
+</html>
