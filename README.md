@@ -1,109 +1,158 @@
-# Lucky Nakola's Portfolio Website
+<div align="center">
+
+# ⚡ Lucky Nakola — Developer Portfolio
+
+**Tier-1 multi-page developer showcase built with modern web standards**
 
 ![Portfolio Preview](img/preview.png)
 
-Welcome to the repository for my personal portfolio website! I’m Lucky Nakola, a Software Engineer, AI & ML Enthusiast, and Web Developer based in Africa. This portfolio showcases my skills, projects, education, experience, and passion for creating impactful digital solutions in areas like education, healthcare, and agriculture.
+[![License: MIT](https://img.shields.io/badge/License-MIT-06b6d4.svg)](LICENSE)
+[![Pages](https://img.shields.io/badge/Pages-9-8b5cf6.svg)](#-site-map)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](#-tech-stack)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)](#-tech-stack)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](#-tech-stack)
 
-## Table of Contents
+[**Live Site →**](https://waiyah.github.io/MY-PORTFOLIO/) · [Report Bug](https://github.com/WAIYAH/MY-PORTFOLIO/issues) · [Request Feature](https://github.com/WAIYAH/MY-PORTFOLIO/issues)
 
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [File Structure](#file-structure)
-- [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+</div>
 
-## About the Project
+---
 
-This portfolio website is a single-page application designed to highlight my professional journey, technical skills, and projects. It features a modern, responsive design with a consistent wave background effect across all sections, smooth animations, and an intuitive layout. The site is built with HTML and CSS, focusing on accessibility and user experience.
+## 👋 About
 
-## Features
+I'm **Lucky Nakola**, a Software Engineer & AI Innovator based in Nairobi, Kenya. This portfolio is a multi-page showcase of my work, skills, and professional journey — designed to command attention from recruiters and engineering leads.
 
-- **Responsive Design**: Fully responsive layout that works seamlessly on desktops, tablets, and mobile devices.
-- **Wave Background Effect**: A subtle animated wave background applied to all sections for a cohesive visual theme.
-- **Sections**:
-  - **Hero**: Introduction with a call-to-action to view projects or download my CV.
-  - **About Me**: Overview of my background, interests, and a highlighted quote showcasing my passion.
-  - **Skills**: Visual representation of my technical skills with progress bars and a list of tools I use.
-  - **Education & Experience**: A timeline of my academic background and professional experience.
-  - **Projects**: Showcase of my key projects with images and links to GitHub or live demos.
-  - **Contact**: A form to get in touch, along with my email and social media links.
-- **Animations**: Smooth fade-in and slide-in effects for a polished user experience.
-- **Social Media Integration**: Links to my social profiles (Facebook, GitHub, WhatsApp, LinkedIn) in the Hero and Footer sections.
-- **Downloadable CV**: A button to download my CV directly from the Hero section.
+The site follows a **"Confident Futurism"** dark theme with a cyan/violet gradient accent system, built entirely with semantic HTML5, Tailwind CSS, and vanilla JavaScript — no frameworks, no build tools, zero dependencies.
 
-## File Structure
+## ✨ Features
 
-portfolio/
-│
-├── img/                    # Folder for images (e.g., profile picture, project images)
-│   └── (placeholder images)
-├── pdf/                    # Folder for PDF files (e.g., CV)
-│   └── cv.pdf             # My CV in PDF format
-├── index.html             # Main HTML file for the portfolio
-├── styles.css             # CSS file for styling the portfolio
-├── LICENSE                # License file for the project
-└── README.md              # This README file
+| Feature | Details |
+|---|---|
+| **Multi-Page Architecture** | 9 purpose-built pages with consistent navigation |
+| **Design System** | CSS custom properties, reusable components, 4 badge variants |
+| **Scroll Animations** | IntersectionObserver-powered reveal effects (fade, slide, scale) |
+| **Interactive Elements** | Typing effect, animated counters, skill progress bars, project filters |
+| **CV Microsite** | Interactive view, print-optimized A4 layout, PDF download hub |
+| **Contact Form** | Client-side validation, subject/budget selectors, FAQ accordion |
+| **Responsive** | Mobile-first with hamburger menu, tested across breakpoints |
+| **Accessible** | WCAG 2.1 AA — ARIA labels, focus-visible, reduced-motion support |
+| **SEO Ready** | Semantic HTML, meta descriptions, sitemap.xml, robots.txt |
+| **Performance** | Lazy loading images, font-display: swap, minimal DOM operations |
 
+## 🗺️ Site Map
 
+```
+index.html          → Hero landing with typing effect & featured projects
+about.html          → Professional narrative, timeline, interests
+expertise.html      → Skills matrix, tools grid, methodology
+projects.html       → Filterable project showcase (10 projects, 4 categories)
+insights.html       → Technical perspectives & thought leadership
+contact.html        → Contact form, FAQ, social links, availability
+cv/view.html        → Interactive two-column resume
+cv/print.html       → Print-optimized A4 resume
+cv/download.html    → Download hub (PDF + print)
+404.html            → Custom error page
+```
 
-## Setup Instructions
+## 📁 Project Structure
 
-To run this portfolio website locally, follow these steps:
+```
+MY-PORTFOLIO/
+├── css/
+│   └── styles.css           # Design system — tokens, components, animations
+├── js/
+│   └── app.js               # Interaction engine — 14 modules (IIFE)
+├── cv/
+│   ├── view.html            # Interactive resume
+│   ├── print.html           # Print-optimized resume
+│   └── download.html        # Download hub
+├── docs/
+│   └── ARCHITECTURE_BLUEPRINT.md
+├── img/                     # Project screenshots & profile photo
+├── pdf/
+│   └── LUCKY NAKOLA CV.pdf  # Downloadable CV
+├── index.html               # Home / hero page
+├── about.html               # About page
+├── expertise.html           # Skills & expertise page
+├── projects.html            # Projects showcase
+├── insights.html            # Blog / insights page
+├── contact.html             # Contact page
+├── 404.html                 # Custom 404 page
+├── sitemap.xml              # SEO sitemap
+├── robots.txt               # Crawler directives
+├── .gitignore               # Git ignore rules
+├── .editorconfig            # Editor consistency
+├── CONTRIBUTING.md          # Contribution guidelines
+├── LICENSE                  # MIT License
+└── README.md                # This file
+```
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/portfolio.git
+## 🛠️ Tech Stack
 
-cd portfolio
+| Layer | Technology |
+|---|---|
+| **Markup** | HTML5 (semantic, accessible) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) (CDN) + Custom CSS design system |
+| **Interactivity** | Vanilla JavaScript ES6+ (no frameworks) |
+| **Typography** | [Inter](https://rsms.me/inter/) · [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) · [JetBrains Mono](https://www.jetbrains.com/lp/mono/) |
+| **Icons** | Inline SVG (Heroicons style) |
+| **Hosting** | GitHub Pages |
 
-Replace your-username with your GitHub username.
+## 🎨 Design System
 
-## Navigate to the Project Directory:
-cd portfolio
-Update Assets:
-Replace placeholder images in the img/ folder (e.g., lucky.jpg, project1.jpg, project2.jpg, project3.jpg) with your actual images.
-Update the pdf/cv.pdf file with your latest CV.
+The visual identity is built on CSS custom properties defined in `css/styles.css`:
 
-## Open the Website:
-Open index.html in a web browser:
-open index.html
-Alternatively, you can double-click index.html to open it in your default browser.
+```
+Background:   #030712 (base) → #0f172a (surface) → #1e293b (elevated)
+Accent:       #06b6d4 (cyan-500)
+Gradient:     135deg → cyan-500 → violet-500
+Gold:         #eab308 (highlights)
+```
 
-## Optional - Live Server:
+**Components:** Buttons (primary / secondary / gold) · Cards · Badges (4 variants) · Timeline · Skill bars · Form inputs · Section headings · Scroll reveal classes
 
-If you’re using an editor like VS Code, you can use the Live Server extension to preview the site with live reloading:
-Install the Live Server extension in VS Code.
-Right-click index.html and select "Open with Live Server."
+## 🚀 Getting Started
 
+No build tools required — just clone and open.
 
-## Usage
-Navigation: Use the fixed navigation bar at the top to jump to different sections (Home, About, Skills, Education & Experience, Projects, Contact).
-Projects: Click on project cards to view them on GitHub or see a live demo (update links in index.html as needed).
-Contact: Fill out the contact form to send a message (requires backend setup for form submission, currently a placeholder).
-CV Download: Click the "Download CV" button in the Hero section to download my CV (ensure cv.pdf is updated).
+```bash
+# Clone the repo
+git clone https://github.com/WAIYAH/MY-PORTFOLIO.git
 
-## Technologies Used
-HTML5: For the structure of the website.
-CSS3: For styling, animations, and responsive design.
-Google Fonts: For typography (Playfair Display and Poppins fonts).
-SVG: For social media icons and wave background effects.
+# Open in browser
+cd MY-PORTFOLIO
+start index.html        # Windows
+open index.html         # macOS
+xdg-open index.html     # Linux
+```
 
-## Contributing
-This is a personal portfolio project, so contributions are not expected. However, if you have suggestions or find any issues, feel free to open an issue or reach out to me directly.
+**Or use VS Code Live Server:**
 
-## License
-This project is licensed under the MIT License. See the  file for details.
+1. Open the folder in VS Code
+2. Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
+3. Right-click `index.html` → **Open with Live Server**
 
-## Contact
-I’d love to connect! Reach out to me via:
+## 🤝 Contributing
 
-Email: luckiesdabwoy@gmail.com
-LinkedIn: (update with your actual link)
-GitHub: (update with your actual link)
-WhatsApp: (update with your actual link)
-Facebook: (update with your actual link)
-Thank you for visiting my portfolio! 🚀
+Feedback and suggestions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## 📄 License
+
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
+
+## 📬 Contact
+
+| Channel | Link |
+|---|---|
+| **Email** | [luckiesdabwoy@gmail.com](mailto:luckiesdabwoy@gmail.com) |
+| **LinkedIn** | [Lucky Nakola](https://www.linkedin.com/in/lucky-nakola-a09633250/) |
+| **GitHub** | [@WAIYAH](https://github.com/WAIYAH) |
+| **WhatsApp** | [+254 715 674 828](https://wa.me/254715674828) |
+| **Location** | Nairobi, Kenya 🇰🇪 |
+
+---
+
+<div align="center">
+  <p><strong>Built with 💙 by Lucky Nakola</strong></p>
+  <p><sub>© 2026 — All rights reserved</sub></p>
+</div>
