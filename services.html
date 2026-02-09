@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional web development, design, and digital solutions by Lucky Nakola. Transparent pricing from Ksh 5,000. Based in Nairobi, Kenya.">
+  <title>Services & Pricing — Lucky Nakola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Space Grotesk','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body class="loading">
+  <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Home"><span class="text-2xl font-bold font-display text-gradient">LN</span><span class="hidden sm:inline text-sm font-medium text-slate-400">Lucky Nakola</span></a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-page="home">Home</a>
+          <a href="about.html" class="nav-link" data-page="about">About</a>
+          <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
+          <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
+          <a href="services.html" class="nav-link active" data-page="services">Services</a>
+          <a href="contact.html" class="btn btn-primary text-xs !py-2 !px-5" data-page="contact">Let's Talk</a>
+        </div>
+        <button class="md:hidden p-2 -mr-2" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger"><span></span><span></span><span></span></div></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="flex flex-col items-center gap-4">
+      <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="expertise.html" class="nav-link">Expertise</a><a href="projects.html" class="nav-link">Projects</a><a href="services.html" class="nav-link">Services</a><a href="insights.html" class="nav-link">Insights</a><a href="contact.html" class="nav-link">Contact</a><a href="cv/view.html" class="nav-link">Resume</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 hero-gradient relative overflow-hidden">
+      <div class="grid-pattern"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl reveal">
+          <p class="section-label">Services & Pricing</p>
+          <h1 class="section-heading text-white">Professional Services.<br><span class="text-gradient">Transparent Pricing.</span></h1>
+          <p class="mt-4 text-lg text-slate-400 max-w-xl">From simple landing pages to enterprise applications — quality digital solutions tailored to the Kenyan market and beyond. No hidden costs, no surprises.</p>
+          <div class="flex flex-wrap gap-3 mt-8">
+            <a href="#pricing" class="btn btn-primary">View Packages</a>
+            <a href="#estimator" class="btn btn-secondary">Estimate Your Project</a>
+          </div>
+          <div class="flex flex-wrap items-center gap-6 mt-10 text-sm text-slate-500">
+            <span class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Free Consultation</span>
+            <span class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>MPesa & Bank Payments</span>
+            <span class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Milestone-Based Payments</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CHOOSE ME ===================== -->
+    <section class="py-20 lg:py-28" style="background:#0a0f1c">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <p class="section-label">Why Work With Me</p>
+          <h2 class="section-heading text-white">Built for <span class="text-gradient">Results</span></h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+          <div class="card text-center">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
+              <svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-white mb-2">Local Understanding</h3>
+            <p class="text-sm text-slate-400">Based in Nairobi. I understand the Kenyan market, MPesa integration, and local business needs.</p>
+          </div>
+          <div class="card text-center">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+              <svg class="w-6 h-6 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-white mb-2">Fast Turnaround</h3>
+            <p class="text-sm text-slate-400">Basic sites in 3–7 days. Complex apps on clear milestones. No dragging deadlines.</p>
+          </div>
+          <div class="card text-center">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-white mb-2">Quality Guaranteed</h3>
+            <p class="text-sm text-slate-400">Responsive, accessible, and tested. 30-day warranty on all deliverables for bug fixes.</p>
+          </div>
+          <div class="card text-center">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+              <svg class="w-6 h-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-white mb-2">Transparent Pricing</h3>
+            <p class="text-sm text-slate-400">Clear pricing upfront. Milestone-based payments so you pay as you see progress.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICE CATEGORIES (Tabs) ===================== -->
+    <section class="py-20 lg:py-28" style="background:#030712" id="services">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <p class="section-label">What I Offer</p>
+          <h2 class="section-heading text-white">Full-Service <span class="text-gradient">Solutions</span></h2>
+          <p class="mt-3 text-slate-400 max-w-lg mx-auto">Select a category to explore the services I provide.</p>
+        </div>
+
+        <!-- Tab Buttons -->
+        <div class="flex flex-wrap justify-center gap-2 mb-12 reveal" role="tablist" aria-label="Service categories">
+          <button class="svc-tab active" role="tab" aria-selected="true" data-tab="web">Web Development</button>
+          <button class="svc-tab" role="tab" aria-selected="false" data-tab="design">Design Services</button>
+          <button class="svc-tab" role="tab" aria-selected="false" data-tab="ict">ICT Support</button>
+          <button class="svc-tab" role="tab" aria-selected="false" data-tab="marketing">Digital Marketing</button>
+        </div>
+
+        <!-- TAB: Web Development -->
+        <div class="svc-panel active" id="panel-web" role="tabpanel">
+          <div class="grid md:grid-cols-2 gap-6 stagger-children">
+            <!-- Basic -->
+            <div class="card relative overflow-hidden">
+              <span class="absolute top-4 right-4 badge badge-emerald text-xs">Popular</span>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center"><svg class="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
+                <div>
+                  <h3 class="font-display font-semibold text-white">Basic Websites</h3>
+                  <p class="text-xs text-slate-500">Portfolio · Landing Page · Event Site</p>
+                </div>
+              </div>
+              <p class="font-display text-2xl font-bold text-white mb-1">Ksh 5,000 <span class="text-sm font-normal text-slate-500">– 25,000</span></p>
+              <p class="text-xs text-slate-500 mb-5">3–7 days delivery</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Single-page or up to 3 pages</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Responsive mobile-first design</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Contact form integration</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>2 rounds of revisions</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>7-day post-launch support</li>
+              </ul>
+              <a href="contact.html?service=basic-website" class="btn btn-secondary w-full text-center text-sm">Get Started →</a>
+            </div>
+
+            <!-- Professional -->
+            <div class="card relative overflow-hidden">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center"><svg class="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg></div>
+                <div>
+                  <h3 class="font-display font-semibold text-white">Professional Websites</h3>
+                  <p class="text-xs text-slate-500">Corporate · SME · CMS · Blog</p>
+                </div>
+              </div>
+              <p class="font-display text-2xl font-bold text-white mb-1">Ksh 30,000 <span class="text-sm font-normal text-slate-500">– 80,000</span></p>
+              <p class="text-xs text-slate-500 mb-5">1–3 weeks delivery</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Multi-page (5–10 pages)</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>CMS / blog integration</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Contact & booking systems</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>SEO-optimized structure</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>3 rounds of revisions</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>14-day post-launch support</li>
+              </ul>
+              <a href="contact.html?service=professional-website" class="btn btn-secondary w-full text-center text-sm">Get Started →</a>
+            </div>
+
+            <!-- E-Commerce -->
+            <div class="card relative overflow-hidden border-cyan-500/30">
+              <span class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-violet-500"></span>
+              <span class="absolute top-4 right-4 badge badge-gold text-xs">Best Value</span>
+              <div class="flex items-center gap-3 mb-4 mt-2">
+                <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center"><svg class="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg></div>
+                <div>
+                  <h3 class="font-display font-semibold text-white">E-Commerce Solutions</h3>
+                  <p class="text-xs text-slate-500">Online Store · MPesa · Inventory</p>
+                </div>
+              </div>
+              <p class="font-display text-2xl font-bold text-white mb-1">Ksh 100,000 <span class="text-sm font-normal text-slate-500">– 200,000</span></p>
+              <p class="text-xs text-slate-500 mb-5">3–6 weeks delivery</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Full online store setup</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>MPesa, card & PayPal payments</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Product & inventory management</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Order tracking & customer portal</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Admin training included</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>30-day post-launch support</li>
+              </ul>
+              <a href="contact.html?service=ecommerce" class="btn btn-primary w-full text-center text-sm">Get Started →</a>
+            </div>
+
+            <!-- Custom App -->
+            <div class="card relative overflow-hidden">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-rose-500/10 flex items-center justify-center"><svg class="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg></div>
+                <div>
+                  <h3 class="font-display font-semibold text-white">Custom Web Applications</h3>
+                  <p class="text-xs text-slate-500">Enterprise · CRM · MIS · API</p>
+                </div>
+              </div>
+              <p class="font-display text-2xl font-bold text-white mb-1">Ksh 150,000<span class="text-sm font-normal text-slate-500">+</span></p>
+              <p class="text-xs text-slate-500 mb-5">6+ weeks · Custom scope</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Enterprise portals (staff/student/client)</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>CRM / ERP / MIS systems</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Custom database & API development</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>User authentication & roles</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Milestone-based delivery & payments</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>60-day post-launch support</li>
+              </ul>
+              <a href="contact.html?service=custom-app" class="btn btn-secondary w-full text-center text-sm">Request Quotation →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: Design Services -->
+        <div class="svc-panel" id="panel-design" role="tabpanel" hidden>
+          <div class="grid md:grid-cols-2 gap-6 stagger-children">
+            <div class="card">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center"><svg class="w-5 h-5 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg></div>
+                <div>
+                  <h3 class="font-display font-semibold text-white">Print & Digital Design</h3>
+                  <p class="text-xs text-slate-500">Posters · Flyers · Social Media · Branding</p>
+                </div>
+              </div>
+              <p class="font-display text-2xl font-bold text-white mb-1">Ksh 500 <span class="text-sm font-normal text-slate-500">– 10,000</span></p>
+              <p class="text-xs text-slate-500 mb-5">1–5 days delivery</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Posters, flyers & brochures</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Social media graphics & templates</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Business cards & letterheads</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Source files delivered</li>
+              </ul>
+              <a href="contact.html?service=print-design" class="btn btn-secondary w-full text-center text-sm">Get Started →</a>
+            </div>
+            <div class="card">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center"><svg class="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg></div>
+                <div>
+                  <h3 class="font-display font-semibold text-white">UI/UX Design</h3>
+                  <p class="text-xs text-slate-500">Wireframes · Prototypes · Design Systems</p>
+                </div>
+              </div>
+              <p class="font-display text-2xl font-bold text-white mb-1">Ksh 15,000 <span class="text-sm font-normal text-slate-500">– 50,000</span></p>
+              <p class="text-xs text-slate-500 mb-5">1–3 weeks delivery</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>User research & personas</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Wireframes & user flows</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>High-fidelity prototypes (Figma)</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Component design systems</li>
+              </ul>
+              <a href="contact.html?service=ui-ux" class="btn btn-secondary w-full text-center text-sm">Get Started →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: ICT Support -->
+        <div class="svc-panel" id="panel-ict" role="tabpanel" hidden>
+          <div class="grid md:grid-cols-2 gap-6 stagger-children">
+            <div class="card">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-teal-500/10 flex items-center justify-center"><svg class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.65-5.65a8 8 0 1111.4 0l-5.65 5.65a.25.25 0 01-.1 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 12a9.75 9.75 0 11-19.5 0 9.75 9.75 0 0119.5 0z"/></svg></div>
+                <div>
+                  <h3 class="font-display font-semibold text-white">Technical Support</h3>
+                  <p class="text-xs text-slate-500">Troubleshooting · Setup · Consultation</p>
+                </div>
+              </div>
+              <p class="font-display text-2xl font-bold text-white mb-1">Ksh 2,000 <span class="text-sm font-normal text-slate-500">– 10,000 / session</span></p>
+              <p class="text-xs text-slate-500 mb-5">Same-day or scheduled</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Software troubleshooting & fixes</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>System setup & configuration</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Digital migration assistance</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Remote or on-site (Nairobi)</li>
+              </ul>
+              <a href="contact.html?service=tech-support" class="btn btn-secondary w-full text-center text-sm">Book a Session →</a>
+            </div>
+            <div class="card">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center"><svg class="w-5 h-5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182"/></svg></div>
+                <div>
+                  <h3 class="font-display font-semibold text-white">Maintenance Packages</h3>
+                  <p class="text-xs text-slate-500">Updates · Security · Performance</p>
+                </div>
+              </div>
+              <p class="font-display text-2xl font-bold text-white mb-1">Ksh 5,000 <span class="text-sm font-normal text-slate-500">– 25,000 / month</span></p>
+              <p class="text-xs text-slate-500 mb-5">Monthly or annual retainer</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Regular content & software updates</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Security monitoring & patching</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Performance optimization</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Priority response within 24hrs</li>
+              </ul>
+              <a href="contact.html?service=maintenance" class="btn btn-secondary w-full text-center text-sm">Choose a Plan →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: Digital Marketing -->
+        <div class="svc-panel" id="panel-marketing" role="tabpanel" hidden>
+          <div class="grid md:grid-cols-2 gap-6 stagger-children">
+            <div class="card">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center"><svg class="w-5 h-5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46"/></svg></div>
+                <div>
+                  <h3 class="font-display font-semibold text-white">Social Media Management</h3>
+                  <p class="text-xs text-slate-500">Strategy · Content · Analytics</p>
+                </div>
+              </div>
+              <p class="font-display text-2xl font-bold text-white mb-1">Ksh 15,000 <span class="text-sm font-normal text-slate-500">– 50,000 / month</span></p>
+              <p class="text-xs text-slate-500 mb-5">Monthly engagement</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Content strategy & calendar</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Post creation & scheduling</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Community management</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Monthly analytics reports</li>
+              </ul>
+              <a href="contact.html?service=social-media" class="btn btn-secondary w-full text-center text-sm">Get Started →</a>
+            </div>
+            <div class="card">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-lg bg-lime-500/10 flex items-center justify-center"><svg class="w-5 h-5 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/></svg></div>
+                <div>
+                  <h3 class="font-display font-semibold text-white">SEO Optimization</h3>
+                  <p class="text-xs text-slate-500">Technical · On-Page · Local SEO</p>
+                </div>
+              </div>
+              <p class="font-display text-2xl font-bold text-white mb-1">Ksh 20,000 <span class="text-sm font-normal text-slate-500">– 80,000</span></p>
+              <p class="text-xs text-slate-500 mb-5">One-time or ongoing</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Technical SEO audit & fixes</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>On-page content optimization</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Local SEO (Kenya-specific)</li>
+                <li class="flex items-start gap-2 text-sm text-slate-400"><svg class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Google Search Console setup</li>
+              </ul>
+              <a href="contact.html?service=seo" class="btn btn-secondary w-full text-center text-sm">Get Started →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRICING COMPARISON TABLE ===================== -->
+    <section class="py-20 lg:py-28" style="background:#0a0f1c" id="pricing">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <p class="section-label">Quick Comparison</p>
+          <h2 class="section-heading text-white">Web Development <span class="text-gradient">Pricing</span></h2>
+        </div>
+
+        <!-- Desktop table -->
+        <div class="hidden lg:block reveal">
+          <div class="overflow-x-auto rounded-2xl border border-slate-800/50">
+            <table class="w-full text-left" role="table">
+              <thead>
+                <tr class="border-b border-slate-800/50" style="background:#0d1424">
+                  <th class="py-4 px-6 font-display font-semibold text-sm text-white">Service Tier</th>
+                  <th class="py-4 px-6 font-display font-semibold text-sm text-white">Price Range (Ksh)</th>
+                  <th class="py-4 px-6 font-display font-semibold text-sm text-white">Timeline</th>
+                  <th class="py-4 px-6 font-display font-semibold text-sm text-white">Best For</th>
+                  <th class="py-4 px-6 font-display font-semibold text-sm text-white">Revisions</th>
+                  <th class="py-4 px-6 font-display font-semibold text-sm text-white">Support</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/30">
+                <tr class="hover:bg-slate-800/20 transition-colors">
+                  <td class="py-4 px-6 font-medium text-white text-sm">Basic Website</td>
+                  <td class="py-4 px-6 text-sm text-cyan-400 font-mono">5,000 – 25,000</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">3–7 days</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">Individuals, Startups</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">2 rounds</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">7 days</td>
+                </tr>
+                <tr class="hover:bg-slate-800/20 transition-colors">
+                  <td class="py-4 px-6 font-medium text-white text-sm">Business Website</td>
+                  <td class="py-4 px-6 text-sm text-cyan-400 font-mono">30,000 – 80,000</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">1–3 weeks</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">SMEs, Professionals</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">3 rounds</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">14 days</td>
+                </tr>
+                <tr class="hover:bg-slate-800/20 transition-colors bg-cyan-500/5">
+                  <td class="py-4 px-6 font-medium text-white text-sm flex items-center gap-2">E-Commerce Store <span class="badge badge-gold text-[10px]">Best Value</span></td>
+                  <td class="py-4 px-6 text-sm text-cyan-400 font-mono">100,000 – 200,000</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">3–6 weeks</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">Retailers, Product Biz</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">4 rounds</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">30 days</td>
+                </tr>
+                <tr class="hover:bg-slate-800/20 transition-colors">
+                  <td class="py-4 px-6 font-medium text-white text-sm">Custom Application</td>
+                  <td class="py-4 px-6 text-sm text-cyan-400 font-mono">150,000+</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">6+ weeks</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">Enterprises, Orgs</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">Unlimited*</td>
+                  <td class="py-4 px-6 text-sm text-slate-400">60 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-xs text-slate-600 mt-3 text-right">* Within agreed scope. Additional scope changes quoted separately.</p>
+        </div>
+
+        <!-- Mobile cards version -->
+        <div class="lg:hidden space-y-4 stagger-children">
+          <div class="card !p-5"><div class="flex justify-between items-start mb-2"><h3 class="font-display font-semibold text-white">Basic Website</h3><span class="font-mono text-sm text-cyan-400">Ksh 5K–25K</span></div><p class="text-xs text-slate-500 mb-2">3–7 days · 2 revisions · 7-day support</p><p class="text-xs text-slate-400">Best for individuals & startups</p></div>
+          <div class="card !p-5"><div class="flex justify-between items-start mb-2"><h3 class="font-display font-semibold text-white">Business Website</h3><span class="font-mono text-sm text-cyan-400">Ksh 30K–80K</span></div><p class="text-xs text-slate-500 mb-2">1–3 weeks · 3 revisions · 14-day support</p><p class="text-xs text-slate-400">Best for SMEs & professionals</p></div>
+          <div class="card !p-5 border-cyan-500/30"><div class="flex justify-between items-start mb-2"><h3 class="font-display font-semibold text-white">E-Commerce Store <span class="badge badge-gold text-[10px] ml-1">Best Value</span></h3><span class="font-mono text-sm text-cyan-400">Ksh 100K–200K</span></div><p class="text-xs text-slate-500 mb-2">3–6 weeks · 4 revisions · 30-day support</p><p class="text-xs text-slate-400">Best for retailers & product businesses</p></div>
+          <div class="card !p-5"><div class="flex justify-between items-start mb-2"><h3 class="font-display font-semibold text-white">Custom Application</h3><span class="font-mono text-sm text-cyan-400">Ksh 150K+</span></div><p class="text-xs text-slate-500 mb-2">6+ weeks · Unlimited revisions* · 60-day support</p><p class="text-xs text-slate-400">Best for enterprises & organizations</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COST ESTIMATOR ===================== -->
+    <section class="py-20 lg:py-28" style="background:#030712" id="estimator">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <p class="section-label">Interactive Tool</p>
+          <h2 class="section-heading text-white">Project Cost <span class="text-gradient">Estimator</span></h2>
+          <p class="mt-3 text-slate-400 max-w-lg mx-auto">Get an instant ballpark estimate. Final pricing is confirmed after a free consultation.</p>
+        </div>
+
+        <div class="card !p-8 md:!p-10 reveal" id="cost-calculator">
+          <div class="space-y-8">
+            <!-- Project Type -->
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-3">What type of project? <span class="text-cyan-400">*</span></label>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-3" role="radiogroup" aria-label="Project type">
+                <button type="button" class="est-option active" data-type="basic" data-base="15000">
+                  <span class="text-lg mb-1">🌐</span>
+                  <span class="text-xs font-medium text-white">Basic Site</span>
+                </button>
+                <button type="button" class="est-option" data-type="professional" data-base="50000">
+                  <span class="text-lg mb-1">🏢</span>
+                  <span class="text-xs font-medium text-white">Business Site</span>
+                </button>
+                <button type="button" class="est-option" data-type="ecommerce" data-base="150000">
+                  <span class="text-lg mb-1">🛒</span>
+                  <span class="text-xs font-medium text-white">E-Commerce</span>
+                </button>
+                <button type="button" class="est-option" data-type="custom" data-base="250000">
+                  <span class="text-lg mb-1">⚙️</span>
+                  <span class="text-xs font-medium text-white">Custom App</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Number of Pages -->
+            <div>
+              <label for="est-pages" class="block text-sm font-medium text-slate-300 mb-2">Number of pages</label>
+              <input type="range" id="est-pages" min="1" max="20" value="5" class="w-full accent-cyan-500 cursor-pointer" aria-label="Number of pages">
+              <div class="flex justify-between text-xs text-slate-500 mt-1"><span>1 page</span><span id="est-pages-val" class="text-cyan-400 font-mono font-semibold">5 pages</span><span>20 pages</span></div>
+            </div>
+
+            <!-- Features -->
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-3">Features needed</label>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                <label class="est-check"><input type="checkbox" value="5000" checked><span>Contact Form</span></label>
+                <label class="est-check"><input type="checkbox" value="8000"><span>Blog / CMS</span></label>
+                <label class="est-check"><input type="checkbox" value="15000"><span>Payment Gateway</span></label>
+                <label class="est-check"><input type="checkbox" value="10000"><span>User Accounts</span></label>
+                <label class="est-check"><input type="checkbox" value="12000"><span>Admin Dashboard</span></label>
+                <label class="est-check"><input type="checkbox" value="7000"><span>SEO Package</span></label>
+                <label class="est-check"><input type="checkbox" value="6000"><span>Analytics Setup</span></label>
+                <label class="est-check"><input type="checkbox" value="20000"><span>API Integration</span></label>
+                <label class="est-check"><input type="checkbox" value="5000"><span>Social Media Links</span></label>
+              </div>
+            </div>
+
+            <!-- Design Complexity -->
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-3">Design complexity</label>
+              <div class="grid grid-cols-3 gap-3" role="radiogroup" aria-label="Design complexity">
+                <button type="button" class="est-complexity active" data-multiplier="1">
+                  <span class="text-xs font-medium text-white">Standard</span>
+                  <span class="text-[10px] text-slate-500">×1.0</span>
+                </button>
+                <button type="button" class="est-complexity" data-multiplier="1.3">
+                  <span class="text-xs font-medium text-white">Premium</span>
+                  <span class="text-[10px] text-slate-500">×1.3</span>
+                </button>
+                <button type="button" class="est-complexity" data-multiplier="1.6">
+                  <span class="text-xs font-medium text-white">Custom / Luxury</span>
+                  <span class="text-[10px] text-slate-500">×1.6</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Timeline -->
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-3">Timeline urgency</label>
+              <div class="grid grid-cols-3 gap-3" role="radiogroup" aria-label="Timeline urgency">
+                <button type="button" class="est-urgency active" data-multiplier="1">
+                  <span class="text-xs font-medium text-white">Standard</span>
+                  <span class="text-[10px] text-slate-500">Normal pace</span>
+                </button>
+                <button type="button" class="est-urgency" data-multiplier="1.25">
+                  <span class="text-xs font-medium text-white">Rush</span>
+                  <span class="text-[10px] text-slate-500">+25%</span>
+                </button>
+                <button type="button" class="est-urgency" data-multiplier="1.5">
+                  <span class="text-xs font-medium text-white">Urgent</span>
+                  <span class="text-[10px] text-slate-500">+50%</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Discount -->
+            <div>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" id="est-nonprofit" class="w-4 h-4 accent-cyan-500 rounded">
+                <span class="text-sm text-slate-300">Non-profit / Educational institution <span class="text-emerald-400 text-xs">(15% discount)</span></span>
+              </label>
+            </div>
+
+            <!-- Result -->
+            <div class="p-6 rounded-2xl bg-slate-800/30 border border-slate-700/30 text-center">
+              <p class="text-xs text-slate-500 uppercase tracking-wider mb-1">Estimated Project Cost</p>
+              <p class="font-display text-4xl md:text-5xl font-bold text-white" id="est-total">Ksh 22,500</p>
+              <p class="text-xs text-slate-500 mt-2">*Ballpark estimate. Final price confirmed after consultation.</p>
+              <div class="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+                <a href="contact.html?service=custom-quote" class="btn btn-primary text-sm">Request Exact Quote</a>
+                <a href="https://wa.me/254715674828?text=Hi%20Lucky!%20I%20used%20the%20cost%20estimator%20and%20I'd%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-sm">
+                  <span class="flex items-center gap-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Chat on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS TIMELINE ===================== -->
+    <section class="py-20 lg:py-28" style="background:#0a0f1c">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <p class="section-label">How It Works</p>
+          <h2 class="section-heading text-white">My <span class="text-gradient">Process</span></h2>
+        </div>
+
+        <div class="relative">
+          <!-- Vertical line -->
+          <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500/40 via-violet-500/40 to-transparent"></div>
+
+          <div class="space-y-8 md:space-y-0 stagger-children">
+            <!-- Step 1 -->
+            <div class="md:grid md:grid-cols-2 md:gap-12 md:mb-12">
+              <div class="md:text-right md:pr-12 relative">
+                <div class="hidden md:flex absolute right-0 top-2 translate-x-1/2 w-10 h-10 rounded-full bg-cyan-500 text-white items-center justify-center font-display font-bold text-sm z-10">1</div>
+                <span class="inline-block md:hidden w-8 h-8 rounded-full bg-cyan-500 text-white text-center leading-8 font-display font-bold text-sm mb-3">1</span>
+                <h3 class="font-display font-semibold text-white mb-1">Free Consultation</h3>
+                <p class="text-sm text-slate-400">We discuss your goals, target audience, and requirements. No commitment — this call is on me.</p>
+                <span class="text-xs font-mono text-cyan-400 mt-2 inline-block">30 minutes · Free</span>
+              </div>
+              <div class="hidden md:block"></div>
+            </div>
+            <!-- Step 2 -->
+            <div class="md:grid md:grid-cols-2 md:gap-12 md:mb-12">
+              <div class="hidden md:block"></div>
+              <div class="md:pl-12 relative">
+                <div class="hidden md:flex absolute left-0 top-2 -translate-x-1/2 w-10 h-10 rounded-full bg-violet-500 text-white items-center justify-center font-display font-bold text-sm z-10">2</div>
+                <span class="inline-block md:hidden w-8 h-8 rounded-full bg-violet-500 text-white text-center leading-8 font-display font-bold text-sm mb-3">2</span>
+                <h3 class="font-display font-semibold text-white mb-1">Proposal & Quotation</h3>
+                <p class="text-sm text-slate-400">I send a detailed proposal with scope, timeline, pricing, and deliverables. Clear and transparent.</p>
+                <span class="text-xs font-mono text-cyan-400 mt-2 inline-block">1–2 business days</span>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="md:grid md:grid-cols-2 md:gap-12 md:mb-12">
+              <div class="md:text-right md:pr-12 relative">
+                <div class="hidden md:flex absolute right-0 top-2 translate-x-1/2 w-10 h-10 rounded-full bg-amber-500 text-white items-center justify-center font-display font-bold text-sm z-10">3</div>
+                <span class="inline-block md:hidden w-8 h-8 rounded-full bg-amber-500 text-white text-center leading-8 font-display font-bold text-sm mb-3">3</span>
+                <h3 class="font-display font-semibold text-white mb-1">Agreement & Deposit</h3>
+                <p class="text-sm text-slate-400">Sign a simple agreement and pay the deposit (50% for projects under Ksh 100K, 40% for larger ones). MPesa or bank transfer.</p>
+                <span class="text-xs font-mono text-cyan-400 mt-2 inline-block">Same day</span>
+              </div>
+              <div class="hidden md:block"></div>
+            </div>
+            <!-- Step 4 -->
+            <div class="md:grid md:grid-cols-2 md:gap-12 md:mb-12">
+              <div class="hidden md:block"></div>
+              <div class="md:pl-12 relative">
+                <div class="hidden md:flex absolute left-0 top-2 -translate-x-1/2 w-10 h-10 rounded-full bg-emerald-500 text-white items-center justify-center font-display font-bold text-sm z-10">4</div>
+                <span class="inline-block md:hidden w-8 h-8 rounded-full bg-emerald-500 text-white text-center leading-8 font-display font-bold text-sm mb-3">4</span>
+                <h3 class="font-display font-semibold text-white mb-1">Development</h3>
+                <p class="text-sm text-slate-400">I build your project with regular progress updates. You'll see previews at each milestone.</p>
+                <span class="text-xs font-mono text-cyan-400 mt-2 inline-block">Per agreed timeline</span>
+              </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="md:grid md:grid-cols-2 md:gap-12 md:mb-12">
+              <div class="md:text-right md:pr-12 relative">
+                <div class="hidden md:flex absolute right-0 top-2 translate-x-1/2 w-10 h-10 rounded-full bg-cyan-500 text-white items-center justify-center font-display font-bold text-sm z-10">5</div>
+                <span class="inline-block md:hidden w-8 h-8 rounded-full bg-cyan-500 text-white text-center leading-8 font-display font-bold text-sm mb-3">5</span>
+                <h3 class="font-display font-semibold text-white mb-1">Review & Revisions</h3>
+                <p class="text-sm text-slate-400">You review the deliverable and request changes. Revisions are included per your package tier.</p>
+                <span class="text-xs font-mono text-cyan-400 mt-2 inline-block">2–5 business days</span>
+              </div>
+              <div class="hidden md:block"></div>
+            </div>
+            <!-- Step 6 -->
+            <div class="md:grid md:grid-cols-2 md:gap-12 md:mb-12">
+              <div class="hidden md:block"></div>
+              <div class="md:pl-12 relative">
+                <div class="hidden md:flex absolute left-0 top-2 -translate-x-1/2 w-10 h-10 rounded-full bg-violet-500 text-white items-center justify-center font-display font-bold text-sm z-10">6</div>
+                <span class="inline-block md:hidden w-8 h-8 rounded-full bg-violet-500 text-white text-center leading-8 font-display font-bold text-sm mb-3">6</span>
+                <h3 class="font-display font-semibold text-white mb-1">Launch & Final Payment</h3>
+                <p class="text-sm text-slate-400">We go live! Final payment on delivery. I handle deployment, DNS, and initial training.</p>
+                <span class="text-xs font-mono text-cyan-400 mt-2 inline-block">Launch day 🚀</span>
+              </div>
+            </div>
+            <!-- Step 7 -->
+            <div class="md:grid md:grid-cols-2 md:gap-12">
+              <div class="md:text-right md:pr-12 relative">
+                <div class="hidden md:flex absolute right-0 top-2 translate-x-1/2 w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-violet-500 text-white items-center justify-center font-display font-bold text-sm z-10">7</div>
+                <span class="inline-block md:hidden w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-violet-500 text-white text-center leading-8 font-display font-bold text-sm mb-3">7</span>
+                <h3 class="font-display font-semibold text-white mb-1">Support & Maintenance</h3>
+                <p class="text-sm text-slate-400">Post-launch support is included. Optional monthly maintenance packages available for ongoing care.</p>
+                <span class="text-xs font-mono text-cyan-400 mt-2 inline-block">Ongoing · Optional retainer</span>
+              </div>
+              <div class="hidden md:block"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PAYMENT INFO ===================== -->
+    <section class="py-20 lg:py-28" style="background:#030712">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <p class="section-label">No Surprises</p>
+          <h2 class="section-heading text-white">Payment <span class="text-gradient">Structure</span></h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 stagger-children">
+          <div class="card text-center">
+            <p class="font-display text-3xl font-bold text-white mb-2">50 / 50</p>
+            <p class="text-sm text-slate-400 mb-3">Projects under Ksh 100,000</p>
+            <div class="flex gap-1 justify-center">
+              <span class="h-2 rounded-full bg-cyan-500 flex-1"></span>
+              <span class="h-2 rounded-full bg-slate-700 flex-1"></span>
+            </div>
+            <p class="text-xs text-slate-500 mt-3">50% upfront · 50% on delivery</p>
+          </div>
+          <div class="card text-center">
+            <p class="font-display text-3xl font-bold text-white mb-2">40 / 40 / 20</p>
+            <p class="text-sm text-slate-400 mb-3">Projects over Ksh 100,000</p>
+            <div class="flex gap-1 justify-center">
+              <span class="h-2 rounded-full bg-cyan-500" style="flex:2"></span>
+              <span class="h-2 rounded-full bg-violet-500" style="flex:2"></span>
+              <span class="h-2 rounded-full bg-slate-700" style="flex:1"></span>
+            </div>
+            <p class="text-xs text-slate-500 mt-3">40% upfront · 40% mid-project · 20% on delivery</p>
+          </div>
+          <div class="card text-center">
+            <p class="font-display text-xl font-bold text-white mb-3">Accepted Methods</p>
+            <div class="space-y-2">
+              <p class="text-sm text-slate-400 flex items-center justify-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>MPesa (Safaricom)</p>
+              <p class="text-sm text-slate-400 flex items-center justify-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-500"></span>Bank Transfer</p>
+              <p class="text-sm text-slate-400 flex items-center justify-center gap-2"><span class="w-2 h-2 rounded-full bg-violet-500"></span>PayPal</p>
+            </div>
+            <p class="text-xs text-slate-500 mt-3">14-day terms for corporate clients</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="py-20 lg:py-28" style="background:#0a0f1c">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <p class="section-label">FAQ</p>
+          <h2 class="section-heading text-white">Common <span class="text-gradient">Questions</span></h2>
+        </div>
+        <div class="space-y-4 stagger-children">
+          <details class="card group" open>
+            <summary class="flex items-center justify-between cursor-pointer list-none"><h3 class="font-display font-semibold text-white pr-4">What if I need changes mid-project?</h3><svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+            <p class="mt-4 text-sm text-slate-400 leading-relaxed">Minor adjustments within scope are no problem. For significant scope changes, I'll provide a quick quote for the additional work before proceeding — so there are never surprises on your bill.</p>
+          </details>
+          <details class="card group">
+            <summary class="flex items-center justify-between cursor-pointer list-none"><h3 class="font-display font-semibold text-white pr-4">Do you offer hosting and domain services?</h3><svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+            <p class="mt-4 text-sm text-slate-400 leading-relaxed">I don't sell hosting directly, but I'll guide you through choosing the best provider for your needs (e.g., Safaricom Cloud, Truehost Kenya, or international providers) and handle the full setup for you at no extra charge.</p>
+          </details>
+          <details class="card group">
+            <summary class="flex items-center justify-between cursor-pointer list-none"><h3 class="font-display font-semibold text-white pr-4">What about ongoing maintenance?</h3><svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+            <p class="mt-4 text-sm text-slate-400 leading-relaxed">Every project includes free post-launch support (7–60 days depending on tier). After that, optional monthly maintenance packages start from Ksh 5,000/month for updates, security, and performance monitoring.</p>
+          </details>
+          <details class="card group">
+            <summary class="flex items-center justify-between cursor-pointer list-none"><h3 class="font-display font-semibold text-white pr-4">Do you offer discounts for non-profits?</h3><svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+            <p class="mt-4 text-sm text-slate-400 leading-relaxed">Yes! Registered non-profits and educational institutions receive a 15% discount on all services. Just mention it during our consultation and provide documentation.</p>
+          </details>
+          <details class="card group">
+            <summary class="flex items-center justify-between cursor-pointer list-none"><h3 class="font-display font-semibold text-white pr-4">Can I pay via MPesa?</h3><svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+            <p class="mt-4 text-sm text-slate-400 leading-relaxed">Absolutely — MPesa is my primary payment method for local clients. Bank transfer and PayPal are also available for larger projects or international clients.</p>
+          </details>
+          <details class="card group">
+            <summary class="flex items-center justify-between cursor-pointer list-none"><h3 class="font-display font-semibold text-white pr-4">How accurate is the cost estimator?</h3><svg class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></summary>
+            <p class="mt-4 text-sm text-slate-400 leading-relaxed">It gives a solid ballpark — typically within 20% of the final quote. The exact price depends on specific requirements discussed during the free consultation. The estimator helps you budget and plan before we talk.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="py-20 relative overflow-hidden" style="background:#030712">
+      <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-violet-500/5"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
+        <p class="text-slate-400 mb-8 max-w-lg mx-auto">Schedule a free 30-minute consultation. No pressure, no commitment — just a conversation about your goals.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contact.html" class="btn btn-primary">Schedule Free Consultation</a>
+          <a href="https://wa.me/254715674828?text=Hi%20Lucky!%20I'd%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+            <span class="flex items-center gap-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp Me Directly</span>
+          </a>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 mt-8 text-sm text-slate-500">
+          <a href="projects.html" class="hover:text-cyan-400 transition-colors">View My Portfolio →</a>
+          <a href="cv/view.html" class="hover:text-cyan-400 transition-colors">See My Resume →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-gradient pt-16 pb-8 border-t border-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1"><a href="index.html" class="inline-flex items-center gap-2 mb-4"><span class="text-2xl font-bold font-display text-gradient">LN</span></a><p class="text-sm text-slate-400 leading-relaxed mb-4">Software Engineer & AI Innovator building impactful digital solutions from Ksh 5,000.</p></div>
+        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Navigation</h4><ul class="space-y-2.5"><li><a href="about.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">About</a></li><li><a href="expertise.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Expertise</a></li><li><a href="projects.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Projects</a></li><li><a href="services.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Services & Pricing</a></li></ul></div>
+        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Resources</h4><ul class="space-y-2.5"><li><a href="cv/view.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Resume</a></li><li><a href="insights.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Insights</a></li><li><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a></li></ul></div>
+        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Get in Touch</h4><ul class="space-y-2.5"><li><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">luckiesdabwoy@gmail.com</a></li><li><a href="tel:+254715674828" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">+254 715 674 828</a></li><li><span class="text-sm text-slate-400">Nairobi, Kenya 🇰🇪</span></li></ul></div>
+      </div>
+      <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4"><p class="text-xs text-slate-500">© 2026 Lucky Nakola.</p><p class="text-xs text-slate-600 font-mono">v2.0</p></div>
+    </div>
+  </footer>
+  <button class="scroll-top-btn" aria-label="Scroll to top"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
+  <script src="js/app.js"></script>
+</body>
+</html>

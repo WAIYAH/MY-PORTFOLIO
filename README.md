@@ -47,6 +47,7 @@ about.html          → Professional narrative, timeline, interests
 expertise.html      → Skills matrix, tools grid, methodology
 projects.html       → Filterable project showcase (10 projects, 4 categories)
 insights.html       → Technical perspectives & thought leadership
+services.html       → Services & pricing, cost estimator, process timeline
 contact.html        → Contact form, FAQ, social links, availability
 cv/view.html        → Interactive two-column resume
 cv/print.html       → Print-optimized A4 resume
@@ -61,7 +62,7 @@ MY-PORTFOLIO/
 ├── css/
 │   └── styles.css           # Design system — tokens, components, animations
 ├── js/
-│   └── app.js               # Interaction engine — 14 modules (IIFE)
+│   └── app.js               # Interaction engine — 16 modules (IIFE)
 ├── cv/
 │   ├── view.html            # Interactive resume
 │   ├── print.html           # Print-optimized resume
@@ -76,6 +77,7 @@ MY-PORTFOLIO/
 ├── expertise.html           # Skills & expertise page
 ├── projects.html            # Projects showcase
 ├── insights.html            # Blog / insights page
+├── services.html            # Services & pricing page
 ├── contact.html             # Contact page
 ├── 404.html                 # Custom 404 page
 ├── sitemap.xml              # SEO sitemap

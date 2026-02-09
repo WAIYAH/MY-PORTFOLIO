@@ -401,6 +401,95 @@
     }, { passive: true });
   }
 
+  // --- Service Tabs ---
+  function initServiceTabs() {
+    const tabs = document.querySelectorAll('.svc-tab');
+    const panels = document.querySelectorAll('.svc-panel');
+    if (!tabs.length) return;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        const target = tab.dataset.tab;
+        panels.forEach(p => {
+          const isActive = p.id === 'panel-' + target;
+          p.classList.toggle('active', isActive);
+          p.hidden = !isActive;
+        });
+      });
+    });
+  }
+
+  // --- Cost Estimator ---
+  function initCostEstimator() {
+    const calc = document.getElementById('cost-calculator');
+    if (!calc) return;
+
+    const totalEl = document.getElementById('est-total');
+    const pagesSlider = document.getElementById('est-pages');
+    const pagesVal = document.getElementById('est-pages-val');
+    const nonprofitCheck = document.getElementById('est-nonprofit');
+
+    function selectOne(group, el) {
+      calc.querySelectorAll('.' + group).forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    // Project type buttons
+    calc.querySelectorAll('.est-option').forEach(btn => {
+      btn.addEventListener('click', () => { selectOne('est-option', btn); recalc(); });
+    });
+
+    // Complexity buttons
+    calc.querySelectorAll('.est-complexity').forEach(btn => {
+      btn.addEventListener('click', () => { selectOne('est-complexity', btn); recalc(); });
+    });
+
+    // Urgency buttons
+    calc.querySelectorAll('.est-urgency').forEach(btn => {
+      btn.addEventListener('click', () => { selectOne('est-urgency', btn); recalc(); });
+    });
+
+    // Pages slider
+    pagesSlider.addEventListener('input', () => {
+      pagesVal.textContent = pagesSlider.value + (pagesSlider.value === '1' ? ' page' : ' pages');
+      recalc();
+    });
+
+    // Feature checkboxes
+    calc.querySelectorAll('.est-check input').forEach(cb => {
+      cb.addEventListener('change', recalc);
+    });
+
+    // Nonprofit discount
+    nonprofitCheck.addEventListener('change', recalc);
+
+    function recalc() {
+      const activeType = calc.querySelector('.est-option.active');
+      const base = parseInt(activeType?.dataset.base || '15000', 10);
+      const pages = parseInt(pagesSlider.value, 10);
+      const pageCost = pages * 1500;
+
+      let featureCost = 0;
+      calc.querySelectorAll('.est-check input:checked').forEach(cb => {
+        featureCost += parseInt(cb.value, 10);
+      });
+
+      const complexity = parseFloat(calc.querySelector('.est-complexity.active')?.dataset.multiplier || '1');
+      const urgency = parseFloat(calc.querySelector('.est-urgency.active')?.dataset.multiplier || '1');
+      const discount = nonprofitCheck.checked ? 0.85 : 1;
+
+      let total = (base + pageCost + featureCost) * complexity * urgency * discount;
+      total = Math.round(total / 500) * 500; // round to nearest 500
+
+      totalEl.textContent = 'Ksh ' + total.toLocaleString('en-KE');
+    }
+
+    recalc();
+  }
+
   // --- Initialize Everything ---
   function init() {
     initLoader();
@@ -417,6 +506,8 @@
     initForms();
     initLazyImages();
     initParallax();
+    initServiceTabs();
+    initCostEstimator();
   }
 
   if (document.readyState === 'loading') {
