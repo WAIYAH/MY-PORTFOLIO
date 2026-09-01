@@ -79,5 +79,21 @@
     "schemas": [],
     "priority": "0.7",
     "changefreq": "monthly"
+  },
+  "privacy.html": {
+    "path": "privacy.html",
+    "title": "Privacy Policy — Lucky Nakola",
+    "description": "Privacy policy for lucky.nakolaexpertsystems.com — what information is collected and how it's used.",
+    "schemas": [],
+    "priority": "0.2",
+    "changefreq": "yearly"
+  },
+  "terms.html": {
+    "path": "terms.html",
+    "title": "Terms of Service — Lucky Nakola",
+    "description": "Terms of service for lucky.nakolaexpertsystems.com.",
+    "schemas": [],
+    "priority": "0.2",
+    "changefreq": "yearly"
   }
 }
