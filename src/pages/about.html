@@ -1,53 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Lucky Nakola — A passionate software engineer and AI innovator dedicated to building technology that uplifts communities across Africa.">
-  <title>About — Lucky Nakola</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Space Grotesk','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
-  </script>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<!--#include "partials/head-meta.html"-->
 </head>
 <body class="loading">
   <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
 
-  <!-- Nav -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 lg:h-20">
-        <a href="index.html" class="flex items-center gap-2" aria-label="Home"><span class="text-2xl font-bold font-display text-gradient">LN</span><span class="hidden sm:inline text-sm font-medium text-slate-400">Lucky Nakola</span></a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="nav-link" data-page="home">Home</a>
-          <a href="about.html" class="nav-link active" data-page="about">About</a>
-          <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
-          <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
-          <a href="insights.html" class="nav-link" data-page="insights">Insights</a>
-          <a href="services.html" class="nav-link" data-page="services">Services</a>
-          <a href="contact.html" class="btn btn-primary text-xs !py-2 !px-5" data-page="contact">Let's Talk</a>
-        </div>
-        <button class="md:hidden p-2 -mr-2" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger"><span></span><span></span><span></span></div></button>
-      </div>
-    </div>
-  </nav>
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="flex flex-col items-center gap-4">
-      <a href="index.html" class="nav-link" data-page="home">Home</a>
-      <a href="about.html" class="nav-link" data-page="about">About</a>
-      <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
-      <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
-      <a href="insights.html" class="nav-link" data-page="insights">Insights</a>
-      <a href="services.html" class="nav-link" data-page="services">Services</a>
-      <a href="contact.html" class="nav-link" data-page="contact">Contact</a>
-      <a href="cv/view.html" class="nav-link" data-page="cv">Resume</a>
-    </div>
-  </div>
+<!--#include "partials/nav.html"-->
+<!--#include "partials/mobile-menu.html"-->
 
   <main>
     <!-- Page Header -->
@@ -70,7 +30,10 @@
           <div class="lg:col-span-2">
             <div class="reveal-scale sticky top-28">
               <div class="relative rounded-2xl overflow-hidden mb-8 border border-slate-800">
-                <img src="img/Lucky.jpg" alt="Lucky Nakola" class="w-full aspect-[4/5] object-cover" loading="lazy">
+                <picture>
+                  <source srcset="img/Lucky.webp" type="image/webp">
+                  <img src="img/Lucky.jpg" alt="Lucky Nakola" class="w-full aspect-[4/5] object-cover" loading="lazy">
+                </picture>
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4">
                   <div class="flex items-center gap-2 mb-2">
@@ -131,6 +94,26 @@
               <cite class="block mt-3 text-sm text-slate-500 not-italic">— Lucky Nakola</cite>
             </blockquote>
 
+            <!-- Beyond Client Work -->
+            <div class="reveal mb-12">
+              <h3 class="font-display text-xl font-semibold text-white mb-2">Beyond Client Work</h3>
+              <p class="text-sm text-slate-400 mb-6">Outside freelance and contract work, I'm building an ecosystem around software and technology education.</p>
+              <div class="grid sm:grid-cols-3 gap-4">
+                <div class="card !p-5">
+                  <h4 class="font-display font-semibold text-white text-sm mb-2">Nakola Expert Systems</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">My technology company — software development, consulting, and digital solutions for businesses and institutions.</p>
+                </div>
+                <div class="card !p-5">
+                  <h4 class="font-display font-semibold text-white text-sm mb-2">Get Techy With Lucky</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">My personal initiative for teaching technology — practical web development, AI, and digital skills training.</p>
+                </div>
+                <div class="card !p-5">
+                  <h4 class="font-display font-semibold text-white text-sm mb-2">Tech Pulse Insider</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">The platform and community I'm building to power that education work — tech articles, training, and a growing community of learners.</p>
+                </div>
+              </div>
+            </div>
+
             <!-- Interests -->
             <div class="reveal mb-12">
               <h3 class="font-display text-xl font-semibold text-white mb-6">Beyond the Code</h3>
@@ -162,16 +145,6 @@
                 <div class="timeline-line"></div>
 
                 <!-- Experience -->
-                <div class="timeline-item mb-8 relative flex gap-4">
-                  <div class="timeline-dot mt-1"></div>
-                  <div class="flex-1 -mt-1">
-                    <span class="badge badge-emerald text-xs mb-2">Feb 2025 — May 2025</span>
-                    <h4 class="font-display font-semibold text-white">Software & ICT Support Intern</h4>
-                    <p class="text-sm text-cyan-400 mb-1">Kenya Institute of Curriculum Development</p>
-                    <p class="text-sm text-slate-400">Worked on AI-driven chatbots and data analytics solutions for institutional use.</p>
-                  </div>
-                </div>
-
                 <div class="timeline-item mb-8 relative flex gap-4">
                   <div class="timeline-dot mt-1"></div>
                   <div class="flex-1 -mt-1">
@@ -257,47 +230,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer-gradient pt-16 pb-8 border-t border-slate-800/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <div class="sm:col-span-2 lg:col-span-1">
-          <a href="index.html" class="inline-flex items-center gap-2 mb-4"><span class="text-2xl font-bold font-display text-gradient">LN</span></a>
-          <p class="text-sm text-slate-400 leading-relaxed mb-4">Software Engineer & AI Innovator building impactful digital solutions for Africa and beyond.</p>
-        </div>
-        <div>
-          <h4 class="font-display font-semibold text-sm text-white mb-4">Navigation</h4>
-          <ul class="space-y-2.5">
-            <li><a href="about.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">About</a></li>
-            <li><a href="expertise.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Expertise</a></li>
-            <li><a href="projects.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Projects</a></li>
-            <li><a href="insights.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Insights</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-display font-semibold text-sm text-white mb-4">Resources</h4>
-          <ul class="space-y-2.5">
-            <li><a href="cv/view.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Resume</a></li>
-            <li><a href="cv/download.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Download CV</a></li>
-            <li><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-display font-semibold text-sm text-white mb-4">Get in Touch</h4>
-          <ul class="space-y-2.5">
-            <li><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">luckiesdabwoy@gmail.com</a></li>
-            <li><a href="https://wa.me/254715674828" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">+254 715 674 828</a></li>
-            <li><span class="text-sm text-slate-400">Nairobi, Kenya 🇰🇪</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-xs text-slate-500">© 2026 Lucky Nakola. Crafted with precision and purpose.</p>
-        <p class="text-xs text-slate-600 font-mono">v2.0</p>
-      </div>
-    </div>
-  </footer>
-
+<!--#include "partials/footer.html"-->
   <button class="scroll-top-btn" aria-label="Scroll to top"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
   <script src="js/app.js"></script>
 </body>

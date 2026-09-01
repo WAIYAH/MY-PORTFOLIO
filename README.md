@@ -12,7 +12,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)](#-tech-stack)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](#-tech-stack)
 
-[**Live Site →**](https://waiyah.github.io/MY-PORTFOLIO/) · [Report Bug](https://github.com/WAIYAH/MY-PORTFOLIO/issues) · [Request Feature](https://github.com/WAIYAH/MY-PORTFOLIO/issues)
+[**Live Site →**](https://lucky.nakolaexpertsystems.com) · [Report Bug](https://github.com/WAIYAH/MY-PORTFOLIO/issues) · [Request Feature](https://github.com/WAIYAH/MY-PORTFOLIO/issues)
 
 </div>
 
@@ -22,7 +22,7 @@
 
 I'm **Lucky Nakola**, a Software Engineer & AI Innovator based in Nairobi, Kenya. This portfolio is a multi-page showcase of my work, skills, and professional journey — designed to command attention from recruiters and engineering leads.
 
-The site follows a **"Confident Futurism"** dark theme with a cyan/violet gradient accent system, built entirely with semantic HTML5, Tailwind CSS, and vanilla JavaScript — no frameworks, no build tools, zero dependencies.
+The site follows a **"Confident Futurism"** dark theme with a cyan/violet gradient accent system, built with semantic HTML5, Tailwind CSS (compiled at build time), and vanilla JavaScript — no frameworks, no runtime dependencies. A small Node build script (`build.js`) assembles shared partials and compiles Tailwind CSS; see [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for details.
 
 ## ✨ Features
 
@@ -31,9 +31,9 @@ The site follows a **"Confident Futurism"** dark theme with a cyan/violet gradie
 | **Multi-Page Architecture** | 9 purpose-built pages with consistent navigation |
 | **Design System** | CSS custom properties, reusable components, 4 badge variants |
 | **Scroll Animations** | IntersectionObserver-powered reveal effects (fade, slide, scale) |
-| **Interactive Elements** | Typing effect, animated counters, skill progress bars, project filters |
+| **Interactive Elements** | Typing effect, animated counters, project filters, case-study accordions |
 | **CV Microsite** | Interactive view, print-optimized A4 layout, PDF download hub |
-| **Contact Form** | Client-side validation, subject/budget selectors, FAQ accordion |
+| **Contact Form** | Real delivery via FormSubmit, client-side validation, subject/budget selectors, FAQ accordion |
 | **Responsive** | Mobile-first with hamburger menu, tested across breakpoints |
 | **Accessible** | WCAG 2.1 AA — ARIA labels, focus-visible, reduced-motion support |
 | **SEO Ready** | Semantic HTML, meta descriptions, sitemap.xml, robots.txt |
@@ -59,29 +59,29 @@ cv/download.html    → Download hub (PDF + print)
 
 ```
 MY-PORTFOLIO/
+├── build.js                 # Build script — assembles src/ into dist/
+├── package.json             # Tailwind CLI is the only devDependency
+├── tailwind.config.js
+├── _headers                 # Cloudflare Pages security headers
+├── src/
+│   ├── pages/                # One source file per output page
+│   │   └── cv/                 # view.html, download.html, print.html
+│   ├── partials/               # head-meta, nav, mobile-menu, footer
+│   ├── data/                   # site.json, pages.json — single source of truth
+│   └── tailwind-input.css
 ├── css/
 │   └── styles.css           # Design system — tokens, components, animations
 ├── js/
-│   └── app.js               # Interaction engine — 16 modules (IIFE)
-├── cv/
-│   ├── view.html            # Interactive resume
-│   ├── print.html           # Print-optimized resume
-│   └── download.html        # Download hub
-├── docs/
-│   └── ARCHITECTURE_BLUEPRINT.md
+│   └── app.js               # Interaction engine (IIFE)
 ├── img/                     # Project screenshots & profile photo
 ├── pdf/
 │   └── LUCKY NAKOLA CV.pdf  # Downloadable CV
-├── index.html               # Home / hero page
-├── about.html               # About page
-├── expertise.html           # Skills & expertise page
-├── projects.html            # Projects showcase
-├── insights.html            # Blog / insights page
-├── services.html            # Services & pricing page
-├── contact.html             # Contact page
-├── 404.html                 # Custom 404 page
-├── sitemap.xml              # SEO sitemap
-├── robots.txt               # Crawler directives
+├── dist/                    # BUILD OUTPUT (gitignored) — what gets deployed
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── ARCHITECTURE_BLUEPRINT.md  # superseded, kept for history
+│   ├── DEPLOYMENT.md
+│   └── PORTFOLIO_AUDIT.md
 ├── .gitignore               # Git ignore rules
 ├── .editorconfig            # Editor consistency
 ├── CONTRIBUTING.md          # Contribution guidelines
@@ -94,11 +94,12 @@ MY-PORTFOLIO/
 | Layer | Technology |
 |---|---|
 | **Markup** | HTML5 (semantic, accessible) |
-| **Styling** | [Tailwind CSS](https://tailwindcss.com/) (CDN) + Custom CSS design system |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) (compiled via CLI at build time) + Custom CSS design system |
 | **Interactivity** | Vanilla JavaScript ES6+ (no frameworks) |
 | **Typography** | [Inter](https://rsms.me/inter/) · [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) · [JetBrains Mono](https://www.jetbrains.com/lp/mono/) |
 | **Icons** | Inline SVG (Heroicons style) |
-| **Hosting** | GitHub Pages |
+| **Build** | Node.js build script (`build.js`) — see [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) |
+| **Hosting** | Cloudflare Pages |
 
 ## 🎨 Design System
 
@@ -111,28 +112,24 @@ Gradient:     135deg → cyan-500 → violet-500
 Gold:         #eab308 (highlights)
 ```
 
-**Components:** Buttons (primary / secondary / gold) · Cards · Badges (4 variants) · Timeline · Skill bars · Form inputs · Section headings · Scroll reveal classes
+**Components:** Buttons (primary / secondary / gold) · Cards · Badges (4 variants) · Timeline · Case-study accordions · Form inputs · Section headings · Scroll reveal classes
 
 ## 🚀 Getting Started
-
-No build tools required — just clone and open.
 
 ```bash
 # Clone the repo
 git clone https://github.com/WAIYAH/MY-PORTFOLIO.git
-
-# Open in browser
 cd MY-PORTFOLIO
-start index.html        # Windows
-open index.html         # macOS
-xdg-open index.html     # Linux
+
+# Install the one devDependency (Tailwind CLI) and build
+npm install
+npm run build
+
+# Serve the built site — any static file server works, e.g.:
+npx http-server dist -p 8080
 ```
 
-**Or use VS Code Live Server:**
-
-1. Open the folder in VS Code
-2. Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
-3. Right-click `index.html` → **Open with Live Server**
+Edit source files under `src/pages/`, `src/partials/`, `css/`, or `js/` — never hand-edit `dist/`, it's regenerated on every build. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for how the build works.
 
 ## 🤝 Contributing
 
@@ -147,7 +144,7 @@ Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
 | Channel | Link |
 |---|---|
 | **Email** | [luckiesdabwoy@gmail.com](mailto:luckiesdabwoy@gmail.com) |
-| **LinkedIn** | [Lucky Nakola](https://www.linkedin.com/in/lucky-nakola-a09633250/) |
+| **LinkedIn** | [Lucky Nakola](https://www.linkedin.com/in/lucky-nakola-loonkishu2026) |
 | **GitHub** | [@WAIYAH](https://github.com/WAIYAH) |
 | **WhatsApp** | [+254 715 674 828](https://wa.me/254715674828) |
 | **Location** | Nairobi, Kenya 🇰🇪 |

@@ -1,46 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Technical insights, perspectives, and thought leadership from Lucky Nakola — on AI, software engineering, and building for impact.">
-  <title>Insights — Lucky Nakola</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Space Grotesk','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
-  </script>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<!--#include "partials/head-meta.html"-->
 </head>
 <body class="loading">
   <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
 
-  <!-- Nav -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 lg:h-20">
-        <a href="index.html" class="flex items-center gap-2" aria-label="Home"><span class="text-2xl font-bold font-display text-gradient">LN</span><span class="hidden sm:inline text-sm font-medium text-slate-400">Lucky Nakola</span></a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="nav-link" data-page="home">Home</a>
-          <a href="about.html" class="nav-link" data-page="about">About</a>
-          <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
-          <a href="projects.html" class="nav-link" data-page="projects">Projects</a>
-          <a href="insights.html" class="nav-link active" data-page="insights">Insights</a>
-          <a href="services.html" class="nav-link" data-page="services">Services</a>
-          <a href="contact.html" class="btn btn-primary text-xs !py-2 !px-5" data-page="contact">Let's Talk</a>
-        </div>
-        <button class="md:hidden p-2 -mr-2" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger"><span></span><span></span><span></span></div></button>
-      </div>
-    </div>
-  </nav>
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="flex flex-col items-center gap-4">
-      <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="expertise.html" class="nav-link">Expertise</a><a href="projects.html" class="nav-link">Projects</a><a href="insights.html" class="nav-link">Insights</a><a href="services.html" class="nav-link">Services</a><a href="contact.html" class="nav-link">Contact</a><a href="cv/view.html" class="nav-link">Resume</a>
-    </div>
-  </div>
+<!--#include "partials/nav.html"-->
+<!--#include "partials/mobile-menu.html"-->
 
   <main>
     <!-- Header -->
@@ -67,7 +34,10 @@
               <h2 class="font-display text-2xl md:text-3xl font-bold text-white mb-4">Why Africa Needs More AI-First Developers</h2>
               <p class="text-slate-400 leading-relaxed mb-6">The next wave of innovation won't come from Silicon Valley alone. Africa's unique challenges — in healthcare, agriculture, finance, and education — demand AI solutions built by people who understand the context.</p>
               <div class="flex items-center gap-4">
-                <img src="img/Lucky.jpg" alt="Lucky Nakola" class="w-10 h-10 rounded-full object-cover" width="40" height="40">
+                <picture>
+                  <source srcset="img/Lucky.webp" type="image/webp">
+                  <img src="img/Lucky.jpg" alt="Lucky Nakola" class="w-10 h-10 rounded-full object-cover" width="40" height="40">
+                </picture>
                 <div>
                   <p class="text-sm font-medium text-white">Lucky Nakola</p>
                   <p class="text-xs text-slate-500">February 2026 · 6 min read</p>
@@ -79,7 +49,7 @@
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
                   <span class="w-5 h-5 mt-0.5 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
-                  <span class="text-sm text-slate-400">Africa's population of 1.4B+ represents the largest untapped AI market globally</span>
+                  <span class="text-sm text-slate-400">Africa's population represents a largely untapped market for context-aware AI products</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="w-5 h-5 mt-0.5 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
@@ -205,18 +175,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer-gradient pt-16 pb-8 border-t border-slate-800/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <div class="sm:col-span-2 lg:col-span-1"><a href="index.html" class="inline-flex items-center gap-2 mb-4"><span class="text-2xl font-bold font-display text-gradient">LN</span></a><p class="text-sm text-slate-400 leading-relaxed mb-4">Software Engineer & AI Innovator building impactful digital solutions.</p></div>
-        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Navigation</h4><ul class="space-y-2.5"><li><a href="about.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">About</a></li><li><a href="expertise.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Expertise</a></li><li><a href="projects.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Projects</a></li><li><a href="insights.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Insights</a></li></ul></div>
-        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Resources</h4><ul class="space-y-2.5"><li><a href="cv/view.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Resume</a></li><li><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a></li></ul></div>
-        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Get in Touch</h4><ul class="space-y-2.5"><li><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">luckiesdabwoy@gmail.com</a></li><li><span class="text-sm text-slate-400">Nairobi, Kenya 🇰🇪</span></li></ul></div>
-      </div>
-      <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4"><p class="text-xs text-slate-500">© 2026 Lucky Nakola.</p><p class="text-xs text-slate-600 font-mono">v2.0</p></div>
-    </div>
-  </footer>
+<!--#include "partials/footer.html"-->
   <button class="scroll-top-btn" aria-label="Scroll to top"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
   <script src="js/app.js"></script>
 </body>

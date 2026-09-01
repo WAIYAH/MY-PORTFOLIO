@@ -319,6 +319,16 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 25px rgba(234, 179, 8, 0.35);
 }
 
+.btn-sent {
+  background: #10b981 !important;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3) !important;
+}
+
+.btn-error {
+  background: #ef4444 !important;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3) !important;
+}
+
 .btn:active {
   transform: translateY(0) scale(0.98);
 }
@@ -635,25 +645,6 @@ h1, h2, h3, h4, h5, h6 {
 .stagger-children.visible > *:nth-child(9) { transition-delay: 640ms; opacity: 1; transform: translateY(0); }
 .stagger-children.visible > *:nth-child(10) { transition-delay: 720ms; opacity: 1; transform: translateY(0); }
 
-/* --- Skill Bar Animation --- */
-.skill-progress {
-  height: 4px;
-  background: var(--border-subtle);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.skill-progress-bar {
-  height: 100%;
-  background: var(--gradient-primary);
-  border-radius: 2px;
-  width: 0;
-  transition: width 1.2s var(--ease-out);
-}
-
-.skill-progress-bar.animate {
-  width: var(--progress);
-}
 
 /* --- Scroll-to-Top --- */
 .scroll-top-btn {
@@ -882,7 +873,7 @@ img:not([loading="lazy"]) {
   background: transparent;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: all var(--duration-normal) var(--ease-out);
+  transition: all var(--duration-base) var(--ease-out);
 }
 .svc-tab:hover {
   color: var(--text-primary);
@@ -911,7 +902,7 @@ img:not([loading="lazy"]) {
   border: 1px solid rgba(255,255,255,0.06);
   background: rgba(255,255,255,0.02);
   cursor: pointer;
-  transition: all var(--duration-normal) var(--ease-out);
+  transition: all var(--duration-base) var(--ease-out);
 }
 .est-option:hover,
 .est-complexity:hover,
@@ -937,7 +928,7 @@ img:not([loading="lazy"]) {
   border: 1px solid rgba(255,255,255,0.06);
   background: rgba(255,255,255,0.02);
   cursor: pointer;
-  transition: all var(--duration-normal) var(--ease-out);
+  transition: all var(--duration-base) var(--ease-out);
   font-size: 0.8125rem;
   color: var(--text-secondary);
 }
@@ -958,7 +949,7 @@ input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   height: 6px;
-  background: var(--bg-card);
+  background: var(--bg-elevated);
   border-radius: 3px;
   outline: none;
 }

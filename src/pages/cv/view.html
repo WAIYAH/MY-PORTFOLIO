@@ -1,46 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Interactive resume of Lucky Nakola — Software Engineer, AI Innovator, full-stack developer based in Nairobi, Kenya.">
-  <title>Resume — Lucky Nakola</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Space Grotesk','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
-  </script>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<!--#include "partials/head-meta.html"-->
 </head>
 <body class="loading">
   <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
 
-  <!-- Nav -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 lg:h-20">
-        <a href="../index.html" class="flex items-center gap-2" aria-label="Home"><span class="text-2xl font-bold font-display text-gradient">LN</span><span class="hidden sm:inline text-sm font-medium text-slate-400">Lucky Nakola</span></a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="../index.html" class="nav-link" data-page="home">Home</a>
-          <a href="../about.html" class="nav-link" data-page="about">About</a>
-          <a href="../expertise.html" class="nav-link" data-page="expertise">Expertise</a>
-          <a href="../projects.html" class="nav-link" data-page="projects">Projects</a>
-          <a href="../insights.html" class="nav-link" data-page="insights">Insights</a>
-          <a href="../services.html" class="nav-link" data-page="services">Services</a>
-          <a href="../contact.html" class="btn btn-primary text-xs !py-2 !px-5" data-page="contact">Let's Talk</a>
-        </div>
-        <button class="md:hidden p-2 -mr-2" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger"><span></span><span></span><span></span></div></button>
-      </div>
-    </div>
-  </nav>
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="flex flex-col items-center gap-4">
-      <a href="../index.html" class="nav-link">Home</a><a href="../about.html" class="nav-link">About</a><a href="../expertise.html" class="nav-link">Expertise</a><a href="../projects.html" class="nav-link">Projects</a><a href="../insights.html" class="nav-link">Insights</a><a href="../services.html" class="nav-link">Services</a><a href="../contact.html" class="nav-link">Contact</a>
-    </div>
-  </div>
+<!--#include "partials/nav.html"-->
+<!--#include "partials/mobile-menu.html"-->
 
   <main>
     <!-- Header -->
@@ -78,7 +45,10 @@
           <aside class="lg:col-span-1 reveal space-y-8">
             <!-- Profile -->
             <div class="text-center lg:text-left">
-              <img src="../img/Lucky.jpg" alt="Lucky Nakola" class="w-28 h-28 rounded-2xl object-cover mx-auto lg:mx-0 ring-2 ring-cyan-500/30" width="112" height="112">
+              <picture>
+                <source srcset="../img/Lucky.webp" type="image/webp">
+                <img src="../img/Lucky.jpg" alt="Lucky Nakola" class="w-28 h-28 rounded-2xl object-cover mx-auto lg:mx-0 ring-2 ring-cyan-500/30" width="112" height="112">
+              </picture>
               <h2 class="font-display text-xl font-bold text-white mt-4">Lucky Nakola</h2>
               <p class="text-cyan-400 font-medium text-sm">Software Engineer</p>
               <p class="text-slate-400 text-sm mt-1">Nairobi, Kenya</p>
@@ -88,10 +58,10 @@
             <div>
               <h3 class="font-display font-semibold text-sm text-white mb-3 uppercase tracking-wider">Contact</h3>
               <ul class="space-y-2.5">
-                <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors break-all">luckiesdabwoy@gmail.com</a></li>
-                <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg><a href="tel:+254715674828" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">+254 715 674 828</a></li>
-                <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">github.com/WAIYAH</a></li>
-                <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-3.572a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.757 8.25"/></svg><a href="https://www.linkedin.com/in/lucky-nakola-a09633250/" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">LinkedIn Profile</a></li>
+                <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg><a href="mailto:{{email}}" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors break-all">{{email}}</a></li>
+                <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg><a href="tel:+254715674828" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">{{phone}}</a></li>
+                <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg><a href="{{githubUrl}}" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">github.com/WAIYAH</a></li>
+                <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-3.572a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.757 8.25"/></svg><a href="{{linkedinUrl}}" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">LinkedIn Profile</a></li>
               </ul>
             </div>
 
@@ -282,18 +252,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer-gradient pt-16 pb-8 border-t border-slate-800/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <div class="sm:col-span-2 lg:col-span-1"><a href="../index.html" class="inline-flex items-center gap-2 mb-4"><span class="text-2xl font-bold font-display text-gradient">LN</span></a><p class="text-sm text-slate-400 leading-relaxed mb-4">Software Engineer & AI Innovator building impactful digital solutions.</p></div>
-        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Navigation</h4><ul class="space-y-2.5"><li><a href="../about.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">About</a></li><li><a href="../expertise.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Expertise</a></li><li><a href="../projects.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Projects</a></li><li><a href="../insights.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Insights</a></li></ul></div>
-        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Resources</h4><ul class="space-y-2.5"><li><a href="view.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Resume</a></li><li><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a></li></ul></div>
-        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Get in Touch</h4><ul class="space-y-2.5"><li><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">luckiesdabwoy@gmail.com</a></li><li><span class="text-sm text-slate-400">Nairobi, Kenya 🇰🇪</span></li></ul></div>
-      </div>
-      <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4"><p class="text-xs text-slate-500">© 2026 Lucky Nakola.</p><p class="text-xs text-slate-600 font-mono">v2.0</p></div>
-    </div>
-  </footer>
+<!--#include "partials/footer.html"-->
   <button class="scroll-top-btn" aria-label="Scroll to top"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
   <script src="../js/app.js"></script>
 </body>

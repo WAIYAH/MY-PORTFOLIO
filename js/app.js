@@ -140,26 +140,6 @@
       .forEach(el => observer.observe(el));
   }
 
-  // --- Skill Progress Bars ---
-  function initSkillBars() {
-    const bars = document.querySelectorAll('.skill-progress-bar');
-    if (!bars.length) return;
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    bars.forEach(bar => observer.observe(bar));
-  }
-
   // --- Counter Animation ---
   function initCounters() {
     const counters = document.querySelectorAll('[data-count]');
@@ -325,17 +305,17 @@
     });
   }
 
-  // --- Form Validation ---
+  // --- Form Submission (FormSubmit.co) ---
   function initForms() {
     const forms = document.querySelectorAll('.contact-form');
     forms.forEach(form => {
       form.addEventListener('submit', e => {
         e.preventDefault();
 
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
+        // Honeypot: if a bot filled this hidden field, silently drop the submission
+        const honey = form.querySelector('[name="_honey"]');
+        if (honey && honey.value) return;
 
-        // Basic validation
         let isValid = true;
         form.querySelectorAll('[required]').forEach(input => {
           if (!input.value.trim()) {
@@ -348,25 +328,56 @@
 
         if (!isValid) return;
 
-        // Simulate send
+        const endpoint = form.dataset.formsubmitEndpoint;
         const btn = form.querySelector('button[type="submit"]');
+        const status = form.querySelector('.form-status');
         const originalText = btn.textContent;
+
         btn.textContent = 'Sending...';
         btn.disabled = true;
+        btn.classList.remove('btn-sent', 'btn-error');
 
-        setTimeout(() => {
-          btn.textContent = 'Sent ✓';
-          btn.classList.add('btn-sent');
-          form.reset();
-
-          setTimeout(() => {
-            btn.textContent = originalText;
-            btn.disabled = false;
-            btn.classList.remove('btn-sent');
-          }, 2500);
-        }, 1200);
+        fetch(endpoint, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form),
+        })
+          .then(res => {
+            if (!res.ok) throw new Error('Request failed');
+            btn.textContent = 'Sent ✓';
+            btn.classList.add('btn-sent');
+            if (status) {
+              status.textContent = "Message sent — I'll get back to you within 24 hours.";
+              status.classList.remove('hidden', 'text-red-400');
+              status.classList.add('text-emerald-400');
+            }
+            form.reset();
+          })
+          .catch(() => {
+            btn.textContent = 'Failed — Try Again';
+            btn.classList.add('btn-error');
+            if (status) {
+              status.textContent = 'Something went wrong. Please email me directly instead.';
+              status.classList.remove('hidden', 'text-emerald-400');
+              status.classList.add('text-red-400');
+            }
+          })
+          .finally(() => {
+            setTimeout(() => {
+              btn.textContent = originalText;
+              btn.disabled = false;
+              btn.classList.remove('btn-sent', 'btn-error');
+            }, 3000);
+          });
       });
     });
+  }
+
+  // --- Print Resume Button ---
+  function initPrintButton() {
+    const btn = document.getElementById('print-resume-btn');
+    if (!btn) return;
+    btn.addEventListener('click', () => window.print());
   }
 
   // --- Lazy Image Load ---
@@ -497,7 +508,6 @@
     initActiveNav();
     initMobileMenu();
     initScrollReveal();
-    initSkillBars();
     initCounters();
     initTyping();
     initScrollTop();
@@ -508,6 +518,7 @@
     initParallax();
     initServiceTabs();
     initCostEstimator();
+    initPrintButton();
   }
 
   if (document.readyState === 'loading') {

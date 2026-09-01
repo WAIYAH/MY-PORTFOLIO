@@ -1,0 +1,83 @@
+{
+  "index.html": {
+    "path": "",
+    "title": "Lucky Nakola — Software Engineer & AI Innovator",
+    "description": "Lucky Nakola — Software Engineer & AI Innovator. Building intelligent solutions that drive real-world impact across Africa and beyond.",
+    "schemas": ["WebSite"],
+    "priority": "1.0",
+    "changefreq": "weekly"
+  },
+  "about.html": {
+    "path": "about.html",
+    "title": "About — Lucky Nakola",
+    "description": "About Lucky Nakola — a software engineer and AI innovator building full-stack and AI-driven solutions for African communities, and the founder of Nakola Expert Systems.",
+    "schemas": ["Organization"],
+    "priority": "0.9",
+    "changefreq": "monthly"
+  },
+  "expertise.html": {
+    "path": "expertise.html",
+    "title": "Expertise — Lucky Nakola",
+    "description": "Lucky Nakola's technical expertise — AI/ML, full-stack development, and the tools and methodologies used to build impactful software.",
+    "schemas": [],
+    "priority": "0.8",
+    "changefreq": "monthly"
+  },
+  "projects.html": {
+    "path": "projects.html",
+    "title": "Projects — Lucky Nakola",
+    "description": "Lucky Nakola's project portfolio and case studies — AI tools, web applications, and community platforms that drive real-world impact.",
+    "ogImage": "/img/Spendhack.webp",
+    "schemas": [],
+    "priority": "0.9",
+    "changefreq": "monthly"
+  },
+  "services.html": {
+    "path": "services.html",
+    "title": "Services & Pricing — Lucky Nakola",
+    "description": "Professional web development, design, and digital solutions by Lucky Nakola. Transparent pricing from Ksh 5,000. Based in Nairobi, Kenya.",
+    "schemas": [],
+    "priority": "0.9",
+    "changefreq": "monthly"
+  },
+  "insights.html": {
+    "path": "insights.html",
+    "title": "Insights — Lucky Nakola",
+    "description": "Technical insights, perspectives, and thought leadership from Lucky Nakola — on AI, software engineering, and building for impact.",
+    "schemas": [],
+    "priority": "0.7",
+    "changefreq": "monthly"
+  },
+  "contact.html": {
+    "path": "contact.html",
+    "title": "Contact — Lucky Nakola",
+    "description": "Get in touch with Lucky Nakola — available for freelance projects, collaborations, and full-time opportunities.",
+    "schemas": [],
+    "priority": "0.8",
+    "changefreq": "yearly"
+  },
+  "404.html": {
+    "path": "404.html",
+    "title": "404 — Page Not Found | Lucky Nakola",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "schemas": [],
+    "noindex": true,
+    "excludeFromSitemap": true
+  },
+  "cv/view.html": {
+    "path": "cv/view.html",
+    "title": "Resume — Lucky Nakola",
+    "description": "Interactive resume of Lucky Nakola — Software Engineer, AI Innovator, full-stack developer based in Nairobi, Kenya.",
+    "schemas": [],
+    "priority": "0.8",
+    "changefreq": "monthly"
+  },
+  "cv/download.html": {
+    "path": "cv/download.html",
+    "title": "Download CV — Lucky Nakola",
+    "description": "Download Lucky Nakola's resume in PDF format.",
+    "schemas": [],
+    "priority": "0.7",
+    "changefreq": "monthly"
+  }
+}

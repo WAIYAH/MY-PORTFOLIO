@@ -1,46 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lucky Nakola's project portfolio — AI tools, web applications, and community platforms that drive real-world impact.">
-  <title>Projects — Lucky Nakola</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Space Grotesk','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
-  </script>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<!--#include "partials/head-meta.html"-->
 </head>
 <body class="loading">
   <div class="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
 
-  <!-- Nav -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 lg:h-20">
-        <a href="index.html" class="flex items-center gap-2" aria-label="Home"><span class="text-2xl font-bold font-display text-gradient">LN</span><span class="hidden sm:inline text-sm font-medium text-slate-400">Lucky Nakola</span></a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="nav-link" data-page="home">Home</a>
-          <a href="about.html" class="nav-link" data-page="about">About</a>
-          <a href="expertise.html" class="nav-link" data-page="expertise">Expertise</a>
-          <a href="projects.html" class="nav-link active" data-page="projects">Projects</a>
-          <a href="insights.html" class="nav-link" data-page="insights">Insights</a>
-          <a href="services.html" class="nav-link" data-page="services">Services</a>
-          <a href="contact.html" class="btn btn-primary text-xs !py-2 !px-5" data-page="contact">Let's Talk</a>
-        </div>
-        <button class="md:hidden p-2 -mr-2" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false"><div class="hamburger"><span></span><span></span><span></span></div></button>
-      </div>
-    </div>
-  </nav>
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="flex flex-col items-center gap-4">
-      <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="expertise.html" class="nav-link">Expertise</a><a href="projects.html" class="nav-link">Projects</a><a href="insights.html" class="nav-link">Insights</a><a href="services.html" class="nav-link">Services</a><a href="contact.html" class="nav-link">Contact</a><a href="cv/view.html" class="nav-link">Resume</a>
-    </div>
-  </div>
+<!--#include "partials/nav.html"-->
+<!--#include "partials/mobile-menu.html"-->
 
   <main>
     <!-- Header -->
@@ -73,7 +40,10 @@
           <!-- SpendHack -->
           <article class="project-item card group" data-category="ai" style="transition: opacity 0.3s, transform 0.3s">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="img/Spendhack.png" alt="SpendHack WhatsApp Chatbot" class="card-image" loading="lazy" width="600" height="375">
+              <picture>
+                <source srcset="img/Spendhack.webp" type="image/webp">
+                <img src="img/Spendhack.png" alt="SpendHack WhatsApp Chatbot" class="card-image" loading="lazy" width="600" height="375">
+              </picture>
               <div class="project-overlay"><div class="flex gap-2"><span class="badge">Python</span><span class="badge">WhatsApp API</span><span class="badge badge-gold">AI</span></div></div>
             </div>
             <div class="flex items-center gap-2 mb-2">
@@ -82,9 +52,22 @@
             </div>
             <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">SpendHack</h3>
             <p class="text-sm text-slate-400 mb-4 leading-relaxed">AI-powered financial assistant built on WhatsApp — helping users track expenses, set budgets, and build smarter spending habits through conversational AI.</p>
-            <div class="flex gap-3">
+            <div class="flex gap-3 mb-4">
               <a href="https://spendhackv1.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
             </div>
+            <details class="case-study group">
+              <summary class="flex items-center justify-between cursor-pointer list-none text-xs font-medium text-slate-400 hover:text-cyan-400 transition-colors">
+                <span>Case study</span>
+                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="mt-3 pt-3 border-t border-slate-800/60 space-y-2 text-xs text-slate-400 leading-relaxed">
+                <p><span class="text-slate-300 font-medium">Problem:</span> Budgeting tools ask people to install and learn a new app — a real barrier to building a consistent expense-tracking habit.</p>
+                <p><span class="text-slate-300 font-medium">Solution:</span> A conversational AI assistant delivered through WhatsApp, so tracking spending happens inside a chat app people already use daily.</p>
+                <p><span class="text-slate-300 font-medium">Architecture:</span> Python backend integrated with the WhatsApp Business API, with conversational logic driving expense capture and budget tracking.</p>
+                <p><span class="text-slate-300 font-medium">My role:</span> Designed and built the chatbot logic and WhatsApp API integration end-to-end.</p>
+                <p><span class="text-slate-300 font-medium">Outcome:</span> A live AI assistant on WhatsApp that helps users track expenses and build smarter spending habits.</p>
+              </div>
+            </details>
           </article>
 
           <!-- Smart Job Assistant -->
@@ -99,15 +82,31 @@
             </div>
             <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Smart Job Assistant</h3>
             <p class="text-sm text-slate-400 mb-4 leading-relaxed">An intelligent tool that streamlines the job application process — helping users craft applications, track progress, and land opportunities faster.</p>
-            <div class="flex gap-3">
+            <div class="flex gap-3 mb-4">
               <a href="https://smart-job-application-assistant.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
             </div>
+            <details class="case-study group">
+              <summary class="flex items-center justify-between cursor-pointer list-none text-xs font-medium text-slate-400 hover:text-cyan-400 transition-colors">
+                <span>Case study</span>
+                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="mt-3 pt-3 border-t border-slate-800/60 space-y-2 text-xs text-slate-400 leading-relaxed">
+                <p><span class="text-slate-300 font-medium">Problem:</span> Job seekers lose time on the repetitive parts of applying — finding relevant roles and tailoring each application.</p>
+                <p><span class="text-slate-300 font-medium">Solution:</span> An AI-assisted web tool that helps users move through the application process faster.</p>
+                <p><span class="text-slate-300 font-medium">Architecture:</span> A JavaScript web application with AI integration supporting matching and application assistance.</p>
+                <p><span class="text-slate-300 font-medium">My role:</span> Built the front-end experience and integrated the AI-assisted matching logic.</p>
+                <p><span class="text-slate-300 font-medium">Outcome:</span> A live tool that helps users find, apply to, and track job opportunities more efficiently.</p>
+              </div>
+            </details>
           </article>
 
           <!-- Nakola Expert Systems -->
           <article class="project-item card group" data-category="business" style="transition: opacity 0.3s, transform 0.3s">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="img/nestech.png" alt="Nakola Expert Systems" class="card-image" loading="lazy" width="600" height="375">
+              <picture>
+                <source srcset="img/nestech.webp" type="image/webp">
+                <img src="img/nestech.png" alt="Nakola Expert Systems" class="card-image" loading="lazy" width="600" height="375">
+              </picture>
               <div class="project-overlay"><div class="flex gap-2"><span class="badge">Full Stack</span><span class="badge">Business</span></div></div>
             </div>
             <div class="flex items-center gap-2 mb-2">
@@ -116,15 +115,31 @@
             </div>
             <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Nakola Expert Systems</h3>
             <p class="text-sm text-slate-400 mb-4 leading-relaxed">Full-featured company website for Nakola Expert Systems — showcasing services, portfolio, and establishing a professional digital business presence.</p>
-            <div class="flex gap-3">
+            <div class="flex gap-3 mb-4">
               <a href="https://nakolaexpertsystems.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
             </div>
+            <details class="case-study group">
+              <summary class="flex items-center justify-between cursor-pointer list-none text-xs font-medium text-slate-400 hover:text-cyan-400 transition-colors">
+                <span>Case study</span>
+                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="mt-3 pt-3 border-t border-slate-800/60 space-y-2 text-xs text-slate-400 leading-relaxed">
+                <p><span class="text-slate-300 font-medium">Problem:</span> Nakola Expert Systems needed a professional digital presence to showcase its services and establish credibility as a technology company.</p>
+                <p><span class="text-slate-300 font-medium">Solution:</span> A full-featured company website covering services, portfolio work, and business information.</p>
+                <p><span class="text-slate-300 font-medium">Architecture:</span> A full-stack web build focused on clear business presentation and lead generation.</p>
+                <p><span class="text-slate-300 font-medium">My role:</span> Designed and built the entire site as founder and lead developer of Nakola Expert Systems.</p>
+                <p><span class="text-slate-300 font-medium">Outcome:</span> A live company website establishing Nakola Expert Systems' professional digital presence.</p>
+              </div>
+            </details>
           </article>
 
           <!-- Kanunka FC -->
           <article class="project-item card group" data-category="web" style="transition: opacity 0.3s, transform 0.3s">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="img/Kanunka Cranes.png" alt="Kanunka FC Website" class="card-image" loading="lazy" width="600" height="375">
+              <picture>
+                <source srcset="img/Kanunka Cranes.webp" type="image/webp">
+                <img src="img/Kanunka Cranes.png" alt="Kanunka FC Website" class="card-image" loading="lazy" width="600" height="375">
+              </picture>
               <div class="project-overlay"><div class="flex gap-2"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span></div></div>
             </div>
             <div class="flex items-center gap-2 mb-2">
@@ -133,9 +148,22 @@
             </div>
             <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Kanunka FC</h3>
             <p class="text-sm text-slate-400 mb-4 leading-relaxed">Dynamic football club website featuring team rosters, match schedules, and community engagement — bringing a local sports club online.</p>
-            <div class="flex gap-3">
+            <div class="flex gap-3 mb-4">
               <a href="https://the-cranes.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
             </div>
+            <details class="case-study group">
+              <summary class="flex items-center justify-between cursor-pointer list-none text-xs font-medium text-slate-400 hover:text-cyan-400 transition-colors">
+                <span>Case study</span>
+                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="mt-3 pt-3 border-t border-slate-800/60 space-y-2 text-xs text-slate-400 leading-relaxed">
+                <p><span class="text-slate-300 font-medium">Problem:</span> A local football club had no online home for fans and the community to follow team news and fixtures.</p>
+                <p><span class="text-slate-300 font-medium">Solution:</span> A dynamic club website with team rosters, match schedules, and community engagement features.</p>
+                <p><span class="text-slate-300 font-medium">Architecture:</span> A responsive HTML, CSS, and JavaScript site.</p>
+                <p><span class="text-slate-300 font-medium">My role:</span> Designed and built the site as a freelance web developer.</p>
+                <p><span class="text-slate-300 font-medium">Outcome:</span> A live website bringing Kanunka FC online for its community.</p>
+              </div>
+            </details>
           </article>
 
           <!-- TechMart -->
@@ -158,7 +186,10 @@
           <!-- Fresh Foods -->
           <article class="project-item card group" data-category="web" style="transition: opacity 0.3s, transform 0.3s">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="img/FreshFood.png" alt="Fresh Foods Website" class="card-image" loading="lazy" width="600" height="375">
+              <picture>
+                <source srcset="img/FreshFood.webp" type="image/webp">
+                <img src="img/FreshFood.png" alt="Fresh Foods Website" class="card-image" loading="lazy" width="600" height="375">
+              </picture>
               <div class="project-overlay"><div class="flex gap-2"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span></div></div>
             </div>
             <div class="flex items-center gap-2 mb-2">
@@ -167,9 +198,22 @@
             </div>
             <h3 class="font-display font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors">Fresh Foods</h3>
             <p class="text-sm text-slate-400 mb-4 leading-relaxed">Clean, appetizing web platform for fresh food delivery — featuring product listings, nutritional information, and order workflows.</p>
-            <div class="flex gap-3">
+            <div class="flex gap-3 mb-4">
               <a href="https://mboga-fresh.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">Live Demo <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
             </div>
+            <details class="case-study group">
+              <summary class="flex items-center justify-between cursor-pointer list-none text-xs font-medium text-slate-400 hover:text-cyan-400 transition-colors">
+                <span>Case study</span>
+                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="mt-3 pt-3 border-t border-slate-800/60 space-y-2 text-xs text-slate-400 leading-relaxed">
+                <p><span class="text-slate-300 font-medium">Problem:</span> A fresh food delivery business needed an appetizing, trustworthy storefront to sell online.</p>
+                <p><span class="text-slate-300 font-medium">Solution:</span> A clean web platform with product listings, nutritional information, and order workflows.</p>
+                <p><span class="text-slate-300 font-medium">Architecture:</span> A responsive HTML, CSS, and JavaScript site.</p>
+                <p><span class="text-slate-300 font-medium">My role:</span> Designed and built the site as a freelance web developer.</p>
+                <p><span class="text-slate-300 font-medium">Outcome:</span> A live storefront giving the business an online presence for product discovery and ordering.</p>
+              </div>
+            </details>
           </article>
 
           <!-- First Aid Guru -->
@@ -206,7 +250,10 @@
           <!-- Replicate -->
           <article class="project-item card group" data-category="web" style="transition: opacity 0.3s, transform 0.3s">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="img/Replicate.png" alt="Replicate" class="card-image" loading="lazy" width="600" height="375">
+              <picture>
+                <source srcset="img/Replicate.webp" type="image/webp">
+                <img src="img/Replicate.png" alt="Replicate" class="card-image" loading="lazy" width="600" height="375">
+              </picture>
               <div class="project-overlay"><div class="flex gap-2"><span class="badge">UI Clone</span><span class="badge">CSS</span></div></div>
             </div>
             <div class="flex items-center gap-2 mb-2">
@@ -249,18 +296,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer-gradient pt-16 pb-8 border-t border-slate-800/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <div class="sm:col-span-2 lg:col-span-1"><a href="index.html" class="inline-flex items-center gap-2 mb-4"><span class="text-2xl font-bold font-display text-gradient">LN</span></a><p class="text-sm text-slate-400 leading-relaxed mb-4">Software Engineer & AI Innovator building impactful digital solutions.</p></div>
-        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Navigation</h4><ul class="space-y-2.5"><li><a href="about.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">About</a></li><li><a href="expertise.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Expertise</a></li><li><a href="projects.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Projects</a></li><li><a href="insights.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Insights</a></li></ul></div>
-        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Resources</h4><ul class="space-y-2.5"><li><a href="cv/view.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Resume</a></li><li><a href="cv/download.html" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">Download CV</a></li><li><a href="https://github.com/WAIYAH" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a></li></ul></div>
-        <div><h4 class="font-display font-semibold text-sm text-white mb-4">Get in Touch</h4><ul class="space-y-2.5"><li><a href="mailto:luckiesdabwoy@gmail.com" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">luckiesdabwoy@gmail.com</a></li><li><a href="https://wa.me/254715674828" class="text-sm text-slate-400 hover:text-cyan-400 transition-colors">+254 715 674 828</a></li><li><span class="text-sm text-slate-400">Nairobi, Kenya 🇰🇪</span></li></ul></div>
-      </div>
-      <div class="pt-8 border-t border-slate-800/50 flex flex-col sm:flex-row justify-between items-center gap-4"><p class="text-xs text-slate-500">© 2026 Lucky Nakola.</p><p class="text-xs text-slate-600 font-mono">v2.0</p></div>
-    </div>
-  </footer>
+<!--#include "partials/footer.html"-->
   <button class="scroll-top-btn" aria-label="Scroll to top"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
   <script src="js/app.js"></script>
 </body>

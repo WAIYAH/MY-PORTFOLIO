@@ -1,0 +1,12 @@
+{
+  "name": "lucky-nakola-portfolio",
+  "private": true,
+  "version": "3.0.0",
+  "description": "Lucky Nakola — Software Engineer & AI Innovator. Personal portfolio, built as static HTML/CSS/JS with a zero-dependency Node build step.",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

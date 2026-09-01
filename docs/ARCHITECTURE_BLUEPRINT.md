@@ -1,5 +1,7 @@
 # Architecture Blueprint — Lucky Nakola Portfolio
 
+> **Superseded by [`ARCHITECTURE.md`](ARCHITECTURE.md) (September 2026).** Kept here for history — the design tokens and motion timings below are still accurate and were carried forward; the file structure and component-sharing plan were since implemented as a real `src/` → `dist/` build.
+
 > Version 2.0 | Principal Engineer Redesign | February 2026
 
 ---
